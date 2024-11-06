@@ -1,0 +1,58 @@
+.inputContainer > input {
+  width: 100%;
+}
+.inputLabel {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.inputContainer > input,
+.dropDownSelect {
+  border: 1px solid var(--border-dark-gray);
+  border-radius: 8px;
+  padding: 14px 10px;
+  line-height: 20px;
+}
+
+.formLabel,
+.formInput {
+  padding-left: 16px !important;
+}
+.formInput {
+  background-color: var(--input-bg);
+  color: var(--placeholder-gray);
+  border: none !important;
+}
+
+.customSelect {
+  min-width: 345px;
+  position: relative;
+}
+
+.inputContainer option {
+  appearance: none;
+}
+.dropDownIcon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.optionContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.option {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.option:last-child {
+  border: none;
+}

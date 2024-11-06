@@ -1,0 +1,131 @@
+.tipsContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 65px;
+  padding-inline: 65px;
+  padding-bottom: 417px;
+}
+.tipHeader {
+  display: flex;
+  gap: 4rem;
+  width: 100%;
+}
+
+.tipHeader > p {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  white-space: pre-line;
+  flex: 1;
+}
+
+.tipHeader > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tipHeader > div > img {
+  width: 534px;
+  height: 383px;
+  border-radius: 9px;
+
+  align-self: flex-end;
+}
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 65px;
+  text-align: center;
+  color: var(--green);
+  margin-block: 7rem;
+}
+
+.tipList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 42px;
+  column-gap: 90px;
+  justify-content: center;
+}
+
+.tipList.strategy {
+  column-gap: 77px;
+}
+
+.singleTipItem {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 26px 47px;
+}
+
+.singleTipItem.strategy {
+  width: calc((100% - 155px) / 3);
+  padding-inline: 20px;
+}
+
+.singleTipItem.strategy > .content {
+  text-align: center;
+}
+
+.singleTipItem > .header {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+
+  color: var(--green);
+}
+
+.singleTipItem > .content {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.singleTipItem > .tipImg {
+  width: 100%;
+}
+
+.tipChart {
+  margin-top: 235px;
+  width: 942px;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .tipsContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 74px;
+    padding-inline: 24px;
+    padding-bottom: 165px;
+  }
+  .tipHeader {
+    flex-direction: column;
+  }
+  .tipHeader > div > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .singleTipItem {
+    width: 100% !important;
+  }
+
+  .tipChart {
+    margin: 0;
+    width: 100%;
+    margin-block: 10rem;
+  }
+}

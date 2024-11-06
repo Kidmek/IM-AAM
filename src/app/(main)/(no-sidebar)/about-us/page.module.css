@@ -1,0 +1,144 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 211px;
+  padding-top: 82px;
+  padding-inline: 65px;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 136px;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 81px;
+}
+
+.noContent {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--green);
+}
+
+.aboutContainer .content {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  color: var(--text-gray);
+
+  letter-spacing: 0.05em;
+}
+
+.learnMoreBtn {
+  width: 50%;
+}
+.learnMoreBtn button {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: center;
+}
+
+.aboutContainer > .vertical {
+  margin-inline: 15rem;
+}
+
+.aboutImg {
+  width: 534px;
+  height: 383px;
+  border-radius: 9px;
+}
+
+.second {
+  margin-top: 131px;
+}
+
+.vertical.centered {
+  justify-content: center;
+  align-items: center;
+  margin-top: 96px;
+  gap: 54px;
+  text-align: center;
+}
+
+.vertical.centered {
+  width: 875px;
+}
+
+.vertical.centered > img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .aboutContainer {
+    padding-top: 70px;
+    padding-inline: 24px;
+    padding-bottom: 88px;
+  }
+
+  .noContent {
+    font-family: Manrope;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 55px;
+    text-align: left;
+  }
+  .vertical {
+    gap: 48px;
+  }
+
+  .aboutContainer > .horizontal {
+    flex-direction: column;
+    gap: 72px;
+  }
+
+  .aboutImg {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .vertical.centered {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .aboutContainer > .vertical {
+    margin-inline: 0;
+  }
+
+  .learnMoreBtn {
+    width: auto;
+    align-self: center;
+
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: center;
+  }
+
+  .content.second {
+    margin-top: 50px;
+  }
+
+  .vertical.centered :first-child {
+    margin-top: 5rem;
+  }
+
+  .aboutContainer .content {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .learnMoreBtn button {
+    font-size: 20px;
+  }
+}

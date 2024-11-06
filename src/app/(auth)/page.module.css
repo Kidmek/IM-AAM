@@ -1,0 +1,127 @@
+.landingContainer {
+  background-image: url(../../assets/landing/landing_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landingContainer > div:nth-of-type(1) {
+  max-width: 690px;
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: center;
+  flex: 1;
+}
+
+.landingTop {
+  display: flex;
+  align-items: center;
+  height: 195px;
+  margin-top: 10px;
+}
+
+.landingTop > img {
+  padding-right: 25px;
+  width: auto;
+  height: 100%;
+}
+
+.landingBody > img {
+  margin-top: -40px;
+}
+
+.landingBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 47px;
+}
+
+.landingBody button {
+  background: linear-gradient(180deg, #008a3d 35.62%, #256541 68.44%);
+  /* width: 222px; */
+  /* height: 55px; */
+  border-radius: 29px;
+  font-size: 24px;
+  padding-inline: 77px;
+  padding-block: 9.5px;
+  color: white;
+}
+
+.landingBody div:nth-of-type(2) {
+  display: flex;
+  gap: 50px;
+  padding-bottom: 93px;
+}
+
+.landingBottom {
+  height: 59px;
+  background: var(--green);
+  width: 100%;
+}
+
+@media screen and (max-width: 780px) {
+  .landingTop {
+    font-size: 12px;
+    line-height: 18px;
+    height: 88px;
+
+    padding-left: 53px;
+    padding-right: 74px;
+    margin-top: 25px;
+  }
+
+  .landingBody > img {
+    width: 100vw;
+  }
+
+  .landingBody {
+    gap: 0px;
+  }
+
+  .landingBody div:nth-of-type(1) {
+    padding-top: 17px;
+    padding-bottom: 39px;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    padding-inline: 64px;
+  }
+
+  .landingBody div:nth-of-type(2) {
+    gap: 8px;
+    padding-bottom: 0;
+    /* padding-bottom: 127px;  */
+  }
+
+  .landingBody button {
+    font-size: 18px;
+    padding-inline: 54px;
+    padding-block: 14px;
+  }
+
+  .landingBody > img {
+    margin-top: 0px;
+  }
+
+  .landingBottom {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .landingBody button {
+    font-size: 18px;
+    padding-inline: 0px;
+    padding-block: 0px;
+    width: 30vw;
+    height: 100%;
+  }
+}

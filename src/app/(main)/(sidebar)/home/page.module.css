@@ -1,0 +1,155 @@
+.homeContainer {
+  padding-top: 53px;
+  padding-bottom: 290px;
+
+  padding-inline: 47px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: var(--tip-text-gray);
+}
+
+.homeTop {
+  display: flex;
+  gap: 93px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homeTitle {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 65px;
+  color: var(--green);
+  max-width: 640px;
+}
+
+.homeDesc {
+  max-width: 421px;
+  padding-block: 54px;
+}
+
+.homeTop > img {
+  margin-bottom: 39px;
+  width: 40vw;
+  height: 100%;
+}
+
+.qr {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qr > div {
+  margin-left: 10px;
+}
+
+.qr > img {
+  margin-left: -10px;
+  max-width: 378px;
+}
+
+.homeIcons {
+  display: flex;
+  padding-top: 38px;
+}
+.homeIcons > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeIcons > div > div {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: rgba(102, 182, 134, 1);
+}
+
+.iconDivider {
+  width: 2px;
+  background-color: var(--medium-gray);
+  margin-inline: 56px;
+}
+
+.homeImages {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.homeImages > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.homeImages > div > img {
+  width: 50%;
+}
+@media screen and (max-width: 1200px) {
+  .homeContainer {
+    padding-inline: 24px;
+    padding-bottom: 142px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+  }
+
+  .homeTitle {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 55px;
+    max-width: 274px;
+  }
+
+  .homeDesc {
+    padding-block: 30px;
+  }
+
+  .qr {
+    padding-top: 5px;
+    gap: 30px;
+  }
+
+  .homeTop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homeContainer img {
+    width: 100%;
+    height: auto;
+  }
+
+  .homeIcons {
+    padding-top: 60px;
+    justify-content: center;
+  }
+
+  .iconDivider {
+    margin-inline: 25px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .homeImages {
+    padding-top: 85px;
+    justify-content: center;
+  }
+
+  .homeImages > div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

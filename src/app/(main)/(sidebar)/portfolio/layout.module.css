@@ -1,0 +1,8 @@
+.porfolioContainer {
+  padding-inline: 40px;
+  padding-top: 12px;
+}
+
+.porfolioContainer > .contentTitle {
+  font-weight: 500;
+}

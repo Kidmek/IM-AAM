@@ -1,0 +1,20 @@
+.settingsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-inline: 40px;
+  padding-top: 40px;
+}
+
+.settingInputs {
+  display: flex;
+  gap: 2rem;
+}
+
+.settingsContainer {
+  padding-bottom: 2rem;
+}
+
+.inner {
+  padding: 0;
+}

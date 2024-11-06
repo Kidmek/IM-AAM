@@ -1,0 +1,37 @@
+.popUpContainer {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popUpButton {
+  margin-inline: auto;
+  max-width: 260px;
+  margin-block: 36px;
+}
+
+.popUpContainer > .blueLine {
+  color: rgba(19, 47, 65, 1);
+}
+
+.riskBody {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25.5px;
+  color: rgba(107, 107, 107, 1);
+}
+
+.riskBody > span {
+  color: black;
+}
+
+.checkBoxContainer {
+  display: flex;
+  gap: 25px;
+  margin-top: 51px;
+  flex-wrap: wrap;
+  margin-bottom: 31px;
+}

@@ -1,0 +1,87 @@
+.contentHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.contentHeaderTitle {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+}
+
+.tab {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border-bottom: 1px solid var(--border-gray);
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-bottom-color: var(--green);
+  border-bottom-width: 2px;
+  cursor: default;
+  color: var(--green);
+}
+
+.contentHeaderDesc {
+  display: flex;
+  justify-content: space-between;
+}
+.contentHeaderSubTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.subTitleValue {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.subSubValue,
+.updated {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--green);
+}
+
+.subSubValue > span,
+.updated {
+  color: var(--text-xlight-gray);
+}
+
+.updatedContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min-content;
+}
+
+.sharpRatio {
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--border-gray);
+  align-items: center;
+}
+.sharpRatio div:first-of-type {
+  border-right: 1px solid var(--border-gray);
+}
+.sharpRatio > * {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+}

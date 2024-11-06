@@ -1,0 +1,41 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.sideBarContainer {
+  padding-left: calc(var(--nav-width));
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: padding-left 0.3s ease, width 0.3s ease;
+}
+
+.pageContent {
+  background-color: white;
+  flex: 1;
+}
+
+.noSideBarContainer > .pageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noSideBarContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.noSideBarContainer > .pageContent > div {
+  max-width: 1440px;
+}
+
+.pageContent > div {
+  display: flex;
+  flex-direction: column;
+}

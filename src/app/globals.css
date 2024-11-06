@@ -1,42 +1,136 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --green: rgba(0, 138, 61, 1);
+  --bg-green: rgba(230, 244, 236, 1);
+  --text-gray: rgba(102, 102, 102, 1);
+  --text-light-gray: rgba(150, 150, 150, 1);
+  --text-xlight-gray: rgba(204, 204, 204, 1);
+  --table-dark-gray: rgba(217, 217, 217, 1);
+  --border-gray: rgba(216, 216, 216, 1);
+  --border-dark-gray: rgba(191, 191, 191, 1);
+  --text-black: rgba(23, 23, 23, 1);
+  --text-dark-blue: rgba(19, 47, 65, 1);
+  --light-green: rgb(210, 242, 223);
+  --gray: rgb(93, 93, 93);
+  --medium-gray: rgb(221, 221, 221);
+  --light-gray: rgb(208, 208, 208);
+  --yellow: rgba(255, 247, 5, 1);
+  --light-yellow: rgba(254, 241, 201, 1);
+  --light-orange: rgb(247, 240, 201);
+  --blue: rgba(74, 134, 232, 1);
+  --light-blue: rgba(98, 98, 255, 1);
+  --dark-green: rgba(36, 78, 17, 1);
+  --table-green: rgb(56, 117, 30);
+  --light-red: rgb(226, 108, 108);
+  --bright-red: rgb(227, 19, 8);
+  --bright-green: rgb(16, 243, 9);
+  --btn-green: rgb(0, 138, 61);
+  --table-light-green: rgb(217, 234, 211);
+  --table-light-gray: rgb(169, 169, 169);
+  --table-deep-dark-gray: rgb(183, 183, 183);
+  --table-light-blue: rgb(5, 253, 254);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --placeholder-gray: rgb(128, 128, 128);
+  --input-bg: rgba(242, 242, 242, 1);
+
+  --icon-size: 10rem;
+
+  --nav-width: 280px;
+  --border-radius: 8px;
+
+  background-color: var(--bg-green);
+
+  --tip-text-gray: rgb(44, 44, 44);
+
+  --table-border: rgba(205, 193, 193, 1);
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-poppins);
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
-a {
-  color: inherit;
+button {
+  cursor: pointer;
+}
+
+/* Global CSS */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.green {
+  color: var(--green) !important;
+}
+
+.black {
+  color: black !important;
+}
+
+/* Checkbox */
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(
+    --green
+  ); /* Modern browsers can use this to change checkbox color */
+}
+
+input[type='checkbox']:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+/*  */
+
+.link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+
+  cursor: pointer;
+  color: black;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.selectedLink {
+  color: var(--green);
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
 }

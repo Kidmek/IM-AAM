@@ -1,0 +1,100 @@
+.navContainer {
+  padding-inline: 20px;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  width: var(--nav-width);
+  gap: 40px;
+  position: sticky;
+  position: fixed; /* Make it fixed */
+  top: 0; /* Position it at the top */
+  left: 0; /* Align it to the left */
+  height: 100vh; /* Full viewport height to cover the entire side */
+  background-color: var(
+    --bg-green
+  ); /* Give it a background to ensure visibility */
+  box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.1);
+
+  z-index: 1000;
+}
+
+.navLogo {
+  color: green;
+  align-self: center;
+  height: 80px;
+  width: auto;
+}
+.navList {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.singleNav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  padding-right: 8px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  color: var(--text-gray);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.singleNav.closed {
+  justify-content: center;
+}
+
+.selected {
+  background-color: var(--green);
+  color: white;
+}
+
+.selectedSub {
+  color: var(--green) !important;
+  font-weight: 500 !important;
+}
+.selectedSub::before {
+  background-color: var(--green) !important;
+}
+
+.navIcon {
+  --size: 28px;
+  height: var(--size);
+  width: var(--size);
+}
+
+.singleNavContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subNav {
+  padding: 0.15rem 0.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  cursor: pointer;
+  color: var(--text-gray);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.subNav::before {
+  content: '';
+  background-color: var(--text-gray);
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.logo.small {
+  height: 80px !important;
+  width: 60px !important;
+}

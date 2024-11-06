@@ -1,0 +1,131 @@
+.weeklySummaryContainer {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30.02px;
+  letter-spacing: 0.1em;
+  flex: 1;
+  width: 100%;
+  padding-inline: 5px;
+  padding-bottom: 33px;
+}
+
+.paddedInline,
+.weeklySummaryTable > p {
+  padding-inline: 23px;
+}
+
+.weeklySummaryContainer > p {
+  margin-bottom: 55px;
+}
+
+.weeklySummaryTable > p {
+  margin-bottom: 25px;
+}
+.weeklySummaryTable > div {
+  overflow-x: auto;
+}
+
+.weeklySummaryTable > div > table {
+  margin-bottom: 25px;
+  width: 100%; /* Ensures table takes full width */
+  min-width: 1200px;
+  table-layout: fixed; /* Ensure fixed layout */
+}
+
+.weeklySummaryContainer tr,
+.weeklySummaryContainer td {
+  padding: 0;
+  max-width: 457px;
+}
+
+.weeklySummaryTable > div > table > thead > tr > th {
+  background-color: var(--green);
+  color: white;
+  overflow: hidden;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36.02px;
+  max-width: 457px;
+  min-width: 127px;
+  min-height: 90px;
+  padding-inline: 41px;
+}
+
+.weeklySummaryTable > .large > thead > tr > th {
+  max-width: 457px;
+  min-height: 90px;
+  padding-inline: 41px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24.01px;
+  letter-spacing: 0.1em;
+}
+.weeklySummaryContainer table {
+  border-collapse: collapse;
+}
+.weeklySummaryContainer th:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.weeklySummaryContainer th:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.weeklySummaryContainer td {
+  border: 1px solid rgba(205, 193, 193, 1);
+  overflow: hidden;
+  margin: auto;
+  padding-top: 0 !important;
+  height: 95px;
+  padding-inline: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30.02px;
+  letter-spacing: 0.1em;
+  color: black;
+  max-width: 457px;
+}
+
+.weeklySummaryTable > .large td {
+  font-size: 16px;
+  line-height: 24.01px;
+}
+
+.lastRowFirstCol {
+  border-bottom-left-radius: 4px;
+}
+
+.lastRowLastCol {
+  border-bottom-right-radius: 4px;
+}
+
+@media screen and (max-width: 1350px) {
+  .weeklySummaryTable > div > table > thead > tr > th {
+    max-width: 457px;
+
+    min-height: 90px;
+    padding-inline: 10px;
+    font-size: 12px;
+    line-height: 18.01px;
+  }
+
+  .weeklySummaryTable > .large > thead > tr > th {
+    padding-inline: 41px;
+    font-size: 12px;
+    line-height: 18.01px;
+  }
+  .weeklySummaryContainer td {
+    padding-inline: 10px;
+  }
+  .weeklySummaryTable > .large td {
+    font-size: 16px;
+    line-height: 24.01px;
+  }
+  .weeklySummaryContainer > p {
+    margin-bottom: 15px;
+  }
+}

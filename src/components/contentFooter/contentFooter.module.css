@@ -1,0 +1,45 @@
+.contentFooterContainer {
+  border-style: solid;
+  border-color: var(--table-border);
+  border-width: 1px;
+  border-radius: 8px;
+  padding: 0 1rem;
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-bottom-width: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  flex: 1;
+}
+
+.stat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat.header {
+  padding: 0 1rem;
+}
+
+.stat.header > p {
+  color: black;
+}
+
+.statsContainer {
+  background-color: var(--green);
+  padding: 1rem;
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+
+.statsContainer p {
+  margin: 0;
+  padding: 0;
+  color: white;
+  margin-top: 1rem;
+}

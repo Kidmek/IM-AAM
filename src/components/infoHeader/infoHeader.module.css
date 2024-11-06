@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contentTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-block: 20px;
+}
+.infoIcon {
+  width: 19.5px;
+  aspect-ratio: 1;
+  color: var(--green);
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  z-index: 100;
+  width: 40vw;
+  background-color: white;
+  padding: 20px 25px;
+  border-radius: var(--border-radius);
+  right: -25vw;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  white-space: pre-line;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltipTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  display: block;
+}
+
+.topMargin {
+  margin-top: 2rem !important;
+}
