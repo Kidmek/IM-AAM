@@ -1,22 +1,14 @@
-'use client'
-
-import { useState } from 'react'
 import { Email1, Email2 } from '@/constants/images'
 import style from './page.module.css'
-import Dialog from '@/components/dialog/Dialog'
 import Image from 'next/image'
-import PopUp1 from '@/components/popUp/PopUp1'
-import PopUp2 from '@/components/popUp/PopUp2'
+import Link from 'next/link'
 export default function EmailVerification() {
-  const [popUpShown, setPopUpShown] = useState<1 | 2 | null>(null)
+  const renderActivation = () => {
+    return <Link href='/home'>[Activation Link]</Link>
+  }
+
   return (
     <>
-      {(popUpShown === 1 || popUpShown === 2) && (
-        <Dialog
-          child={popUpShown === 1 ? <PopUp1 /> : <PopUp2 />}
-          onClose={() => setPopUpShown(null)}
-        />
-      )}
       <div className={style.emaiVContainer}>
         <div className={style.emailBody}>
           <div className={style.emailTitle}>
@@ -29,15 +21,7 @@ export default function EmailVerification() {
             decisions! To get started on your journey to financial success,
             please click the link below to activate your account:
           </div>
-          <a
-            href=''
-            onClick={(e) => {
-              e.preventDefault()
-              setPopUpShown(1)
-            }}
-          >
-            [Activation Link]
-          </a>
+          {renderActivation()}
           <div>
             By activating your account, you&apos;ll gain access to a wealth of
             resources, including real-time analysis, personalized
@@ -74,15 +58,7 @@ export default function EmailVerification() {
             Simply click the link below to activate your IM-AAM account and
             begin your journey towards financial freedom:
           </div>
-          <a
-            href=''
-            onClick={(e) => {
-              e.preventDefault()
-              setPopUpShown(2)
-            }}
-          >
-            [Activation Link]
-          </a>
+          {renderActivation()}
           <div>
             If you encounter any issues or have questions about the activation
             process, please don&apos;t hesitate to contact our support team.

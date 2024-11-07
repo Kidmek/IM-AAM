@@ -54,11 +54,14 @@ export default function Nav({ navOpen }: { navOpen: boolean }) {
 
   return (
     <div className={style.navContainer}>
-      <Image
-        src={Logo}
-        alt='Logo'
-        className={`${style.navLogo} ${!navOpen && style.small}`}
-      />
+      <Link href={'/home'}>
+        <Image
+          src={Logo}
+          alt='Logo'
+          className={`${style.navLogo} ${!navOpen && style.small}`}
+        />
+      </Link>
+
       <div className={style.navList}>
         {NavElements.map((nav) => renderSingleNav(nav))}
       </div>

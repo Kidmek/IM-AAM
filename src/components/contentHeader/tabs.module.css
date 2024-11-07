@@ -1,8 +1,5 @@
 .contentHeaderContainer {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  gap: 1rem;
 }
 
 .contentHeaderTitle {
@@ -14,6 +11,7 @@
 .tabs {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
 .tab {
@@ -21,10 +19,15 @@
   font-size: 14px;
   line-height: 21px;
   border-bottom: 1px solid var(--border-gray);
-  flex: 1;
   text-align: center;
+  flex: 1;
   padding: 10px 0;
   cursor: pointer;
+}
+
+.tab.noTitle {
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .tab.active {
@@ -34,9 +37,11 @@
   color: var(--green);
 }
 
+/*  */
 .contentHeaderDesc {
   display: flex;
   justify-content: space-between;
+  margin-block: 20px;
 }
 .contentHeaderSubTitle {
   font-weight: 600;
@@ -84,4 +89,15 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 13px;
+}
+/*  */
+
+@media screen and (max-width: 720px) {
+  .tab.noTitle {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .contentHeaderTitle {
+    padding-inline: 24px;
+  }
 }

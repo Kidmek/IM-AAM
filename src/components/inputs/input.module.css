@@ -1,3 +1,4 @@
+.inputContainer,
 .inputContainer > input {
   width: 100%;
 }
@@ -55,4 +56,13 @@
 
 .option:last-child {
   border: none;
+}
+
+.error {
+  color: red;
+}
+
+.inputContainer input.inputError {
+  border: 1px solid red !important;
+  margin-bottom: 5px;
 }

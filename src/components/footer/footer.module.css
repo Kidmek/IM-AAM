@@ -110,8 +110,7 @@
     width: 100%;
   }
 
-  .footerMiddle .link {
-    font-family: Roboto;
+  .footerMiddle a {
     font-size: 14px;
     font-weight: 700;
     line-height: 16.41px;

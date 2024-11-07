@@ -1,4 +1,4 @@
-import { FC, SVGProps } from 'react'
+import { CSSProperties, FC, SVGProps } from 'react'
 
 interface Props {
   label: string
@@ -6,7 +6,7 @@ interface Props {
   bgColor?: string
   txtColor?: string
   customContainerStyles?: React.CSSProperties
-  variant?: 'bold'
+  variant?: 'bold' | 'slim'
   Icon?: FC<SVGProps<SVGSVGElement>>
 }
 
@@ -19,7 +19,7 @@ export default function CustomButton({
   variant,
   Icon,
 }: Props) {
-  const boldText = {
+  const boldText: CSSProperties = {
     fontFamily: 'Poppins',
     fontSize: '20px',
     fontWeight: '700',
@@ -27,6 +27,10 @@ export default function CustomButton({
     letterSpacing: ' 0.30000001192092896px',
   }
 
+  const slim: CSSProperties = {
+    maxWidth: '172px',
+    paddingBlock: '10px',
+  }
   return (
     <button
       onClick={onClick}
@@ -38,13 +42,19 @@ export default function CustomButton({
         borderRadius: 'var(--border-radius)',
         width: '100%',
         cursor: 'pointer',
-        ...customContainerStyles,
-        ...(variant === 'bold' ? boldText : undefined),
+
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         gap: '8px',
+        ...customContainerStyles,
+        ...(variant === 'bold'
+          ? boldText
+          : variant === 'slim'
+          ? slim
+          : undefined),
       }}
+      type='button'
     >
       {Icon && <Icon />}
       {label}

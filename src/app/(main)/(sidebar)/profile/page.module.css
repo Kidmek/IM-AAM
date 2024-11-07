@@ -1,0 +1,18 @@
+.container {
+  padding-inline: 40px;
+  padding-top: 34px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.tabsContainer {
+  max-width: 469px;
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    padding-top: 0;
+    padding-bottom: 20px;
+    padding-inline: 0px;
+  }
+}

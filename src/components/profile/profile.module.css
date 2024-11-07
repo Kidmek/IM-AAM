@@ -1,0 +1,60 @@
+/* Profile */
+.container {
+  padding-left: 26px;
+  padding-block: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 30px;
+  border-bottom: 1px solid rgba(217, 217, 217, 1);
+  margin-bottom: 30px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.details,
+.changePass {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.single {
+  display: flex;
+  align-items: center;
+  max-width: 456px;
+}
+
+.changePass {
+  color: rgba(51, 51, 51, 1);
+}
+
+.label {
+  min-width: 180px;
+}
+
+.container > button {
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+/*  */
+
+@media screen and (max-width: 720px) {
+  .container {
+    padding-inline: 29px;
+    padding-block: 0px;
+  }
+
+  .container > button {
+    align-self: center;
+  }
+}

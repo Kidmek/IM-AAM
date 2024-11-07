@@ -6,3 +6,9 @@
 .porfolioContainer > .contentTitle {
   font-weight: 500;
 }
+
+@media screen and (max-width: 720px) {
+  .porfolioContainer {
+    padding-inline: 0px;
+  }
+}

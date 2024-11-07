@@ -1,13 +1,15 @@
+import { HTMLInputTypeAttribute } from 'react'
 import style from './input.module.css'
 
 interface Props {
-  label: string
+  label?: string
   state: string
   setState: (value: string, name?: string) => void
-  type?: 'text' | 'number' | 'password' | undefined
+  type?: HTMLInputTypeAttribute | undefined
   placeholder?: string
   name?: string
   isForm?: boolean
+  error?: string | null
 }
 export default function CustomInput({
   label,
@@ -17,22 +19,34 @@ export default function CustomInput({
   placeholder,
   name,
   isForm,
+  error,
 }: Props) {
   return (
     <div className={style.inputContainer}>
-      <label className={`${style.inputLabel} ${isForm && style.formLabel}`}>
-        {label}
-      </label>
+      {label && (
+        <label
+          className={`${style.inputLabel} ${isForm && style.formLabel} ${
+            error && style.error
+          }`}
+        >
+          {label}
+        </label>
+      )}
 
       <input
-        type={type ?? 'text'}
-        className={`${isForm && style.formInput}`}
+        type={type}
+        className={`${isForm && style.formInput} ${error && style.inputError}`}
         value={state}
         onChange={(e) => {
           setState(e.target.value, name)
         }}
         placeholder={placeholder}
       />
+      {error && (
+        <span className={`${isForm && style.formLabel} ${style.error}`}>
+          {error}
+        </span>
+      )}
     </div>
   )
 }

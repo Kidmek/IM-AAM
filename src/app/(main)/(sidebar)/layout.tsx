@@ -10,6 +10,7 @@ export default function SideBarLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const [navOpen, setNavOpen] = useState(true)
+  const [noSideBar, setNoSideBar] = useState(false)
 
   useEffect(() => {
     const root = document.documentElement
@@ -19,14 +20,29 @@ export default function SideBarLayout({
       root.style.setProperty('--nav-width', '100px') // Collapsed width
     }
   }, [navOpen])
+
+  useEffect(() => {
+    setNoSideBar(window.innerWidth < 1000)
+    const handleResize = () => {
+      setNoSideBar(window.innerWidth < 1000)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <>
-      <Nav navOpen={navOpen} />
-      <div className={style.sideBarContainer}>
+      {!noSideBar && <Nav navOpen={navOpen} />}
+      <div
+        className={
+          noSideBar ? style.noSideBarContainer : style.sideBarContainer
+        }
+      >
         <Header
           toggleNav={() => setNavOpen(!navOpen)}
           navOpen={navOpen}
-          noSideBar={false}
+          noSideBar={noSideBar}
         />
         <div className={style.pageContent}>{children}</div>
         <Footer />

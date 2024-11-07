@@ -76,11 +76,13 @@ export default function Header({ toggleNav, navOpen, noSideBar }: Props) {
               <NotificationIcon_SVG className={style.notificationIcon} />
               <div className={style.notificationCount}>1</div>
             </Link>
-            <Image
-              src={profile}
-              alt='Profile Image'
-              className={style.profileImg}
-            />
+            <Link href={'/profile'}>
+              <Image
+                src={profile}
+                alt='Profile Image'
+                className={style.profileImg}
+              />
+            </Link>
           </>
         ) : (
           <div></div>

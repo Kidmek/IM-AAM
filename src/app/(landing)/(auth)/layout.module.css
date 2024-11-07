@@ -1,0 +1,57 @@
+.authContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: row; /* Ensure it stays in row on larger screens */
+}
+
+.logoContainer {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  padding-inline: 9rem;
+}
+
+.logoContainer > div {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+}
+
+.logo {
+  width: 157px;
+  height: 207px;
+}
+
+.logoText {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+/* Mobile view */
+@media screen and (max-width: 1150px) {
+  .authContainer {
+    flex-direction: column;
+  }
+
+  .logoContainer {
+    width: 100vw;
+    padding: 72px 26px;
+    justify-content: center;
+  }
+
+  .logoContainer > div {
+    max-width: 337px;
+  }
+
+  .logo {
+    width: 91px;
+    height: 120px;
+  }
+
+  .logoText {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

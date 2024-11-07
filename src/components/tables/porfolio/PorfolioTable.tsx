@@ -1,4 +1,4 @@
-import { positionHeaders } from '@/constants/strings/position'
+import { positionHeaders, positionToolTip } from '@/constants/strings/position'
 import {
   FilterIcon_SVG,
   HelpIcon_SVG,
@@ -6,8 +6,9 @@ import {
 } from '../../../constants/images'
 
 import style from './porfolio.module.css'
+import TableHeader from '@/components/contentHeader/TableHeader'
 
-export default function PortfolioTable() {
+export default function PortfolioTable({ title }: { title: string }) {
   const renderMomentumLine = (days: string, option: string, color?: string) => {
     return (
       <div className={style.quarter}>
@@ -37,66 +38,88 @@ export default function PortfolioTable() {
     )
   }
   return (
-    <div className={style.tableContainer}>
-      <p>Recommended</p>
-      <table>
-        <thead>
-          <tr>
-            {positionHeaders.map((h, index) => {
-              const minWidth = h.name.length * 6 + h.name.split(' ').length * 5
-              const hasBoth = h.help && !h.filter_disabled
-              return (
-                <th
-                  key={index}
-                  style={{
-                    backgroundColor: `var(--green)`,
-                    minWidth: `${minWidth > 70 ? minWidth : 70}px`,
-                    color: 'white',
-                  }}
-                >
-                  <div className={style.headerCell}>
-                    <div className={style.headerTitle}>{h.name}</div>
-                    <div className={style.headerIcons}>
-                      {h.help && (
-                        <HelpIcon_SVG
-                          className={`${style.helpIcon} ${
-                            hasBoth && style.absolute
-                          }`}
-                        />
-                      )}
-                      {!h.filter_disabled ? (
-                        <FilterIcon_SVG className={style.filterIcon} />
-                      ) : (
-                        <div className={style.filterIcon} />
-                      )}
+    <div className={style.container}>
+      <TableHeader title={title} />
+      <div className={style.tableContainer}>
+        <p>Recommended</p>
+        <table>
+          <thead>
+            <tr>
+              {positionHeaders.map((h, index) => {
+                const minWidth =
+                  h.name.length * 6 + h.name.split(' ').length * 5
+                const hasBoth = h.help && !h.filter_disabled
+                return (
+                  <th
+                    key={index}
+                    style={{
+                      backgroundColor: `var(--green)`,
+                      minWidth: `${minWidth > 70 ? minWidth : 70}px`,
+                      color: 'white',
+                    }}
+                  >
+                    <div className={style.headerCell}>
+                      <div className={style.headerTitle}>{h.name}</div>
+                      <div className={style.headerIcons}>
+                        {h.help && (
+                          <div className={style.tooltip}>
+                            <HelpIcon_SVG
+                              className={`${style.helpIcon} ${
+                                hasBoth && style.absolute
+                              }`}
+                            />
+                            <div className={style.tooltiptext}>
+                              {positionToolTip.map((t, index) => {
+                                return (
+                                  <div key={index}>
+                                    <span
+                                      className={`${style.tooltipTitle} ${
+                                        index > 0 ? style.topMargin : ''
+                                      }`}
+                                    >
+                                      {t.title}
+                                    </span>
+                                    {t.tip}
+                                  </div>
+                                )
+                              })}
+                            </div>
+                          </div>
+                        )}
+                        {!h.filter_disabled ? (
+                          <FilterIcon_SVG className={style.filterIcon} />
+                        ) : (
+                          <div className={style.filterIcon} />
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </th>
+                  </th>
+                )
+              })}
+            </tr>
+          </thead>
+
+          <tbody>
+            {[
+              positionHeaders,
+              positionHeaders,
+              positionHeaders,
+              positionHeaders,
+            ].map((t, index) => {
+              return (
+                <tr key={index}>
+                  {t.map((h, index) => {
+                    if (index == 0) {
+                      return <td key={index}>{renderMomentum(80)}</td>
+                    }
+                    return <td key={index}>{h.value}</td>
+                  })}
+                </tr>
               )
             })}
-          </tr>
-        </thead>
-
-        <tbody>
-          {[
-            positionHeaders,
-            positionHeaders,
-            positionHeaders,
-            positionHeaders,
-          ].map((t, index) => {
-            return (
-              <tr key={index}>
-                {t.map((h, index) => {
-                  if (index == 0) {
-                    return <td key={index}>{renderMomentum(80)}</td>
-                  }
-                  return <td key={index}>{h.value}</td>
-                })}
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }

@@ -23,7 +23,8 @@
 }
 
 .stat.header {
-  padding: 0 1rem;
+  padding-inline: 20px;
+  padding-block: 10px;
 }
 
 .stat.header > p {
@@ -32,14 +33,17 @@
 
 .statsContainer {
   background-color: var(--green);
-  padding: 1rem;
   border-top-right-radius: var(--border-radius);
   border-top-left-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-inline: 20px;
+  padding-block: 8px;
 }
 
 .statsContainer p {
   margin: 0;
   padding: 0;
   color: white;
-  margin-top: 1rem;
 }

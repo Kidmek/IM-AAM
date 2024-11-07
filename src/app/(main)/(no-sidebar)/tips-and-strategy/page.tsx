@@ -7,7 +7,7 @@ import {
   tipsHeader2,
 } from '../../../../constants/images'
 import style from './page.module.css'
-import { strategies, tips, tipsHeader } from '@/constants/strings/common'
+import { strategies, tips, tipsHeader } from '@/constants/strings/tips'
 
 export default function TipAndStrategies() {
   const renderSingle = (isTip: boolean) => {

@@ -205,3 +205,14 @@ export const positionHeaders = [
 
 export const positionLightHelp = [2, 16, 17, 18, 19]
 export const positionLightSort = [7, 8, 11, 13, 14, 15, 19, 20, 21, 22, 29, 30]
+
+export const positionToolTip = [
+  {
+    title: 'Investment Amount:',
+    tip: `Your investment amount determines the scale of your portfolio and directly impacts the potential returns and risks associated with your investments. Without knowing your investment amount, our app cannot accurately recommend the appropriate allocation of funds across different stocks or provide tailored advice on portfolio diversification.
+
+
+      Without knowing your investment amount, our app won't be able to optimize your portfolio's stock weight, allocate budgets to individual stocks, or provide insights into position sizing.This lack of information could lead to suboptimal investment decisions, potentially resulting in overexposure to certain stocks or sectors, or underutilization of available funds.
+`,
+  },
+]

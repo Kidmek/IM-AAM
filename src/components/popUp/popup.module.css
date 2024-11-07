@@ -5,6 +5,14 @@
   line-height: 27px;
   display: flex;
   flex-direction: column;
+  gap: 26px;
+}
+
+.popUpContainer img {
+  width: auto;
+  height: min-content;
+  align-self: center;
+  margin-bottom: 10px;
 }
 
 .popUpButton {
@@ -35,3 +43,27 @@
   flex-wrap: wrap;
   margin-bottom: 31px;
 }
+
+/*  */
+.insufficientPopUp {
+  gap: 0;
+  padding-bottom: 36px;
+}
+.insufficientPopUp img {
+  margin-bottom: 0;
+}
+
+.insufficientPopUp p {
+  margin-bottom: 36px;
+}
+
+.insufficientPopUp div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/*  */

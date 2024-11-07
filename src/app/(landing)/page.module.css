@@ -1,5 +1,5 @@
 .landingContainer {
-  background-image: url(../../assets/landing/landing_bg.png);
+  background-image: url(/public/assets/landing/landing_bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

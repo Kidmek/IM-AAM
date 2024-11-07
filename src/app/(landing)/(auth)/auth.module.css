@@ -1,37 +1,6 @@
-.registrationContainer {
-  display: flex;
-  flex-direction: row; /* Ensure it stays in row on larger screens */
-}
-
-.logoContainer {
-  width: 50vw;
-  display: flex;
-  align-items: center;
-  padding-inline: 9rem;
-}
-
-.logoContainer > div {
-  display: flex;
-  align-items: center;
-  max-width: 500px;
-}
-
-.logo {
-  width: 157px;
-  height: 207px;
-}
-
-.logoText {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-  text-align: center;
-}
-
 .formWrapper {
   width: 50vw;
   background: white;
-  height: 100vh;
 }
 
 .formContainer {
@@ -43,6 +12,7 @@
   overflow-y: auto; /* Only this container should scroll */
   padding-top: 24px;
   padding-bottom: 89px;
+  justify-content: center;
 }
 
 /* Hide scrollbar for WebKit browsers */
@@ -59,13 +29,13 @@
 .formContainer {
   -ms-overflow-style: none; /* IE and Edge */
 }
-.formContainer > div {
+.form {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.formContainer > div > div {
+.form > div {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -87,7 +57,15 @@
   align-items: center;
 }
 
+.formContainer a {
+  color: var(--green);
+  cursor: pointer;
+
+  text-decoration: underline;
+}
+
 /* LOGIN */
+
 .forgot {
   font-size: 16px;
   font-weight: 500;
@@ -105,13 +83,6 @@
   margin: 0;
 }
 
-.noAccount > a {
-  color: var(--green);
-  cursor: pointer;
-
-  text-decoration: underline;
-}
-
 .or {
   font-size: 20px;
   font-weight: 700;
@@ -126,13 +97,31 @@
 
 /*  */
 
+/* Reset */
+.resetText {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+}
+
+.backIcon {
+  display: flex;
+  align-items: center;
+  padding-left: 33px;
+  padding-top: 22px;
+  color: var(--green);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  gap: 12px;
+  cursor: pointer;
+}
+/*  */
+
 /* Mobile view */
 @media screen and (max-width: 1150px) {
-  .registrationContainer {
-    flex-direction: column;
-  }
-
-  .logoContainer,
   .formWrapper,
   .formContainer {
     width: 100vw;
@@ -159,25 +148,6 @@
   .formContainer > div {
     display: flex;
     flex-direction: column;
-  }
-
-  .logoContainer {
-    padding: 72px 26px;
-    justify-content: center;
-  }
-
-  .logoContainer > div {
-    max-width: 337px;
-  }
-
-  .logo {
-    width: 91px;
-    height: 120px;
-  }
-
-  .logoText {
-    font-size: 16px;
-    line-height: 24px;
   }
 
   .terms {

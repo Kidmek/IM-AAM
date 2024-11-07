@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import {
   Crypto_SVG,
@@ -11,10 +13,28 @@ import {
   Stock_SVG,
 } from '@/constants/images'
 import style from './page.module.css'
+import { useState } from 'react'
+import Dialog from '@/components/dialog/Dialog'
+import PopUp1 from '@/components/popUp/PopUp1'
+import PopUpAttention from '@/components/popUp/PopUpAttention'
 
 export default function Home() {
+  const [popUpShown, setPopUpShown] = useState<1 | 2 | null>(1)
   return (
     <div className={style.homeContainer}>
+      {popUpShown && (
+        <Dialog
+          child={popUpShown === 1 ? <PopUp1 /> : <PopUpAttention />}
+          onClose={() => {
+            setPopUpShown(null)
+            setTimeout(() => {
+              if (popUpShown === 1) {
+                setPopUpShown(2)
+              }
+            }, 200)
+          }}
+        />
+      )}
       <div className={style.homeTop}>
         <div>
           <div className={style.homeTitle}>
