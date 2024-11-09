@@ -3,7 +3,7 @@ import { Logo } from '../../constants/images'
 import style from './nav.module.css'
 import { usePathname } from 'next/navigation'
 import { NavElements } from '@/constants/nav'
-import Image from 'next/image'
+
 import Link from 'next/link'
 
 export default function Nav({ navOpen }: { navOpen: boolean }) {
@@ -55,8 +55,8 @@ export default function Nav({ navOpen }: { navOpen: boolean }) {
   return (
     <div className={style.navContainer}>
       <Link href={'/home'}>
-        <Image
-          src={Logo}
+        <img
+          src={Logo.src}
           alt='Logo'
           className={`${style.navLogo} ${!navOpen && style.small}`}
         />

@@ -16,7 +16,7 @@ export default function BrokerageFeeTable() {
             </th>
             <th
               style={{
-                minWidth: '40%',
+                minWidth: '30%',
               }}
             >
               Countries

@@ -1,11 +1,14 @@
-import Image from 'next/image'
 import style from './popup.module.css'
 import { PopUp1Top, PopUp2Top } from '@/constants/images'
 
 export default function PopUp1() {
   return (
     <div className={style.popUpContainer}>
-      <Image src={PopUp1Top} alt='Pop Up Image' className={style.popUpImage} />
+      <img
+        src={PopUp1Top.src}
+        alt='Pop Up Image'
+        className={style.popUpImage}
+      />
       <p className='fw-700'>
         Welcome to IM-AAM &#x2013; Your Stock Price Movement Advisor
       </p>
@@ -24,7 +27,11 @@ export default function PopUp1() {
         stock price movements within the boundaries of regulatory compliance.
       </p>
       <p className='fw-700'>Your Path to Financial Success</p>
-      <Image src={PopUp2Top} alt='Pop Up Image' className={style.popUpImage} />
+      <img
+        src={PopUp2Top.src}
+        alt='Pop Up Image'
+        className={style.popUpImage}
+      />
       <p>
         While IM-AAM does not facilitate stock trading directly, our platform
         serves as your trusted advisor, offering timely advice and

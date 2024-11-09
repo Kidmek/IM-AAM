@@ -4,7 +4,7 @@ import style from './setting.module.css'
 
 export default function CountryTable() {
   return (
-    <div className={style.tableContainer}>
+    <div className={`${style.tableContainer} ${style.transparentHeader}`}>
       <table>
         <thead>
           <tr>
@@ -17,7 +17,7 @@ export default function CountryTable() {
             </th>
             <th
               style={{
-                width: '30%',
+                width: '25%',
               }}
             >
               Countries

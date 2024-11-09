@@ -9,8 +9,17 @@
   line-height: 18px;
   background-color: var(--green);
   color: white;
+  outline: 1px solid var(--table-border);
+  text-align: center;
+  padding: 12px 0.5rem;
+  line-height: 18px;
 }
 
+.transparentHeader th {
+  background-color: rgba(var(--green), 0.1);
+  outline-color: rgba(216, 216, 216, 1);
+  color: black;
+}
 .tableContainer > table {
   width: 100%;
 }
@@ -25,15 +34,6 @@
   font-weight: 500;
   line-height: 30px;
   color: var(--green);
-}
-
-.tableContainer th {
-  outline: 1px solid var(--table-border);
-  font-weight: 500;
-  font-size: 12px;
-  text-align: center;
-  padding: 12px 0.5rem;
-  line-height: 18px;
 }
 
 .dataHeader > div {

@@ -1,6 +1,6 @@
 import { Email1, Email2 } from '@/constants/images'
 import style from './page.module.css'
-import Image from 'next/image'
+
 import Link from 'next/link'
 export default function EmailVerification() {
   const renderActivation = () => {
@@ -13,7 +13,7 @@ export default function EmailVerification() {
         <div className={style.emailBody}>
           <div className={style.emailTitle}>
             <div>Dear [User&apos;s Name],</div>
-            <Image src={Email1} alt='Email' />
+            <img src={Email1.src} alt='Email' />
           </div>
           <div>
             Welcome to IM-AAM – your ultimate destination for unlocking the
@@ -52,7 +52,7 @@ export default function EmailVerification() {
                 </div>
               </div>
             </div>
-            <Image src={Email2} alt='Email' />
+            <img src={Email2.src} alt='Email' />
           </div>
           <div>
             Simply click the link below to activate your IM-AAM account and

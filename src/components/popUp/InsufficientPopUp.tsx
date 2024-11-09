@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import style from './popup.module.css'
 import { Insuffient } from '@/constants/images'
 import CustomButton from '../button/CustomButton'
@@ -6,7 +5,7 @@ import CustomButton from '../button/CustomButton'
 export default function InsufficientPopUp() {
   return (
     <div className={`${style.popUpContainer} ${style.insufficientPopUp}`}>
-      <Image src={Insuffient} alt='Insuffient' />
+      <img src={Insuffient.src} alt='Insuffient' />
 
       <p className='fw-700'>Insufficient Balance</p>
       <p>

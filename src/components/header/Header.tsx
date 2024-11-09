@@ -11,7 +11,7 @@ import {
   SearchIcon_SVG,
 } from '../../constants/images'
 import style from './header.module.css'
-import Image from 'next/image'
+
 import { usePathname } from 'next/navigation'
 interface Props {
   toggleNav?: () => void
@@ -24,7 +24,7 @@ export default function Header({ toggleNav, navOpen, noSideBar }: Props) {
   return (
     <div className={`${style.headerContainer} ${noSideBar && style.noSideBar}`}>
       {noSideBar ? (
-        <Image alt='Logo' src={Logo} className={style.headerLogo} />
+        <img alt='Logo' src={Logo.src} className={style.headerLogo} />
       ) : (
         <div>
           <AlignIcon_SVG
@@ -77,8 +77,8 @@ export default function Header({ toggleNav, navOpen, noSideBar }: Props) {
               <div className={style.notificationCount}>1</div>
             </Link>
             <Link href={'/profile'}>
-              <Image
-                src={profile}
+              <img
+                src={profile.src}
                 alt='Profile Image'
                 className={style.profileImg}
               />

@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import style from './page.module.css'
 import { terms } from '@/constants/strings/terms'
 
@@ -25,8 +23,8 @@ export default function TermsAndConditions() {
                   item.title
                 )}
               </div>
-              <Image
-                src={item.image}
+              <img
+                src={item.image.src}
                 alt='Image'
                 style={{
                   width: 'auto',

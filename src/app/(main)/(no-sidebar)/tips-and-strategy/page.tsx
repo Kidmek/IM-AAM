@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import {
   chart,
   strategy,
@@ -22,8 +21,8 @@ export default function TipAndStrategies() {
                 key={index}
                 className={`${style.singleTipItem} ${!isTip && style.strategy}`}
               >
-                <Image
-                  src={isTip ? tip : strategy}
+                <img
+                  src={isTip ? tip.src : strategy.src}
                   alt='Image'
                   className={style.tipImg}
                 />
@@ -42,14 +41,14 @@ export default function TipAndStrategies() {
       <div className={style.tipHeader}>
         <p>{tipsHeader}</p>
         <div>
-          <Image src={tipsHeader1} alt='Tip Header' />
-          <Image src={tipsHeader2} alt='Tip Header' />
+          <img src={tipsHeader1.src} alt='Tip Header' />
+          <img src={tipsHeader2.src} alt='Tip Header' />
         </div>
       </div>
       {renderSingle(true)}
       {renderSingle(false)}
 
-      <Image src={chart} alt='Chart' className={style.tipChart} />
+      <img src={chart.src} alt='Chart' className={style.tipChart} />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { ArrowUp_SVG, Logo } from '../../constants/images'
 import style from './footer.module.css'
 import { Moto } from '@/constants/strings/common'
 import Link from 'next/link'
-import Image from 'next/image'
+
 import { usePathname } from 'next/navigation'
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <div className={style.footerContainer}>
       <div className={style.footerLogoContainer}>
-        <Image alt='Logo' src={Logo} />
+        <img alt='Logo' src={Logo.src} />
         <div>{Moto}</div>
       </div>
       <div className={style.footerMiddle}>

@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import {
   Crypto_SVG,
   Home1,
@@ -45,7 +44,7 @@ export default function Home() {
           </div>
           <div className={style.qr}>
             <div>Scan and Invest</div>
-            <Image src={HomeQR} alt='QR' />
+            <img src={HomeQR.src} alt='QR' />
           </div>
 
           <div>One platform. Multiple investment opportunities.</div>
@@ -66,16 +65,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Image src={Home1} alt='chart' />
+        <img src={Home1.src} alt='chart' />
       </div>
       <div className={style.homeImages}>
         <div>
-          <Image src={Home2} alt='chart' />
-          <Image src={Home3} alt='chart' />
+          <img src={Home2.src} alt='chart' />
+          <img src={Home3.src} alt='chart' />
         </div>
         <div>
-          <Image src={Home4} alt='chart' />
-          <Image src={Home5} alt='chart' />
+          <img src={Home4.src} alt='chart' />
+          <img src={Home5.src} alt='chart' />
         </div>
       </div>
     </div>
