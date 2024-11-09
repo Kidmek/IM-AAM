@@ -52,6 +52,7 @@ export default function Login() {
               name='password'
               placeholder='Password'
               isForm={true}
+              type='password'
             />
 
             <div className={style.terms}>
@@ -66,7 +67,7 @@ export default function Login() {
 
           <CustomButton label='Login' onClick={onLogin} />
 
-          <Link href={'/reset-pass'}>
+          <Link href={'/forgot-pass'}>
             <div className={style.forgot}>Forgot username or password?</div>
           </Link>
           <p className={style.noAccount}>

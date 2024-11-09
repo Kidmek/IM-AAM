@@ -1,8 +1,7 @@
 import { Countries } from '@/constants/strings/settings'
-
 import style from './setting.module.css'
 
-export default function CountryTable() {
+export default function BrokerageFeeTable() {
   return (
     <div className={style.tableContainer}>
       <table>
@@ -17,17 +16,24 @@ export default function CountryTable() {
             </th>
             <th
               style={{
-                width: '30%',
+                minWidth: '40%',
               }}
             >
               Countries
             </th>
             <th
               style={{
-                width: '50%',
+                minWidth: '20%',
               }}
             >
-              Recommended Stocks Amount
+              Maximum
+            </th>
+            <th
+              style={{
+                minWidth: '20%',
+              }}
+            >
+              Minimum
             </th>
             <th
               style={{
@@ -44,7 +50,9 @@ export default function CountryTable() {
               <tr key={index} className={style.settingRow}>
                 <td>0{index + 1}</td>
                 <td>{c.name}</td>
-                <td>{c.recommended}</td>
+                <td>{c.maximum}</td>
+                <td>{c.minimum}</td>
+
                 <td>
                   <input type='checkbox' />
                 </td>

@@ -10,13 +10,6 @@ export default function TableHeader({ title }: { title: string }) {
           + $151.152 <span>All</span>
         </div>
       </div>
-      <div className={style.updatedContainer}>
-        <div className={style.updated}>Updated 00:25</div>
-        <div className={style.sharpRatio}>
-          <div>Sharp Ratio</div>
-          <div>100%</div>
-        </div>
-      </div>
     </div>
   )
 }

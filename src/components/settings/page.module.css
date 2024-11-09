@@ -1,20 +1,25 @@
 .settingsContainer {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
   padding-inline: 40px;
-  padding-top: 40px;
-}
-
-.settingInputs {
-  display: flex;
-  gap: 2rem;
-}
-
-.settingsContainer {
-  padding-bottom: 2rem;
+  padding-top: 52px;
 }
 
 .inner {
   padding: 0;
+}
+
+.settingsContainer > p {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-bottom: 36px;
+}
+
+.settingsContainer > div {
+  margin-bottom: 48px;
+  padding: 20px;
+  border: 1px solid rgba(216, 216, 216, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(230, 244, 236, 1);
 }

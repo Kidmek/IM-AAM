@@ -33,10 +33,14 @@ export const Countries = [
   {
     name: 'India',
     recommended: 'IRFC ( Indian Railway Finance Corporate )',
+    maximum: '5%',
+    minimum: '$200',
   },
   {
     name: 'America',
     recommended: 'NBCC ( National Buildings Contruction Corporation )',
+    maximum: '5%',
+    minimum: '$200',
   },
   {
     name: 'China',

@@ -14,11 +14,9 @@ export default function RecommendedTable() {
                 <th
                   key={index}
                   style={{
-                    backgroundColor: `var(${h.color})`,
                     minWidth: `${
                       h.name.length * 6 + h.name.split(' ').length * 5
                     }px`,
-                    color: isDark ? 'white' : 'black',
                   }}
                 >
                   <div className={style.headerCell}>

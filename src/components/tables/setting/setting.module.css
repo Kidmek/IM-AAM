@@ -7,6 +7,8 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
+  background-color: var(--green);
+  color: white;
 }
 
 .tableContainer > table {
@@ -15,7 +17,7 @@
 /* Recommended */
 
 .tableContainer {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .tableContainer > p {

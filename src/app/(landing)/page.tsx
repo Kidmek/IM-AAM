@@ -1,12 +1,17 @@
 import Link from 'next/link'
-import { Landing1, Logo } from '../../constants/images'
+import { Landing1, LandingBg, Logo } from '../../constants/images'
 import { Moto } from '@/constants/strings/common'
 import style from './page.module.css'
 import Image from 'next/image'
 
 export default function Landing() {
   return (
-    <div className={style.landingContainer}>
+    <div
+      className={style.landingContainer}
+      style={{
+        backgroundImage: `url(${LandingBg.src})`,
+      }}
+    >
       <div>
         <div className={style.landingTop}>
           <Image src={Logo} alt='Logo' />

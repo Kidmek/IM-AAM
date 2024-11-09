@@ -30,6 +30,7 @@ export default function Profile() {
           state={password[value]}
           setState={(v) => setPassword({ ...password, [value]: v })}
           placeholder={label}
+          type='password'
         />
       </div>
     )
