@@ -13,11 +13,11 @@ export default function Landing() {
     >
       <div>
         <div className={style.landingTop}>
-          <img src={Logo.src} alt='Logo' />
+          <img src={Logo} alt='Logo' />
           <div>{Moto}</div>
         </div>
         <div className={style.landingBody}>
-          <img src={Landing1.src} alt='Logo' />
+          <img src={Landing1} alt='Logo' />
           <div>Strategically grow your net asset value</div>
           <div>
             <Link href={'/login'}>

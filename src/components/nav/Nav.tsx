@@ -56,7 +56,7 @@ export default function Nav({ navOpen }: { navOpen: boolean }) {
     <div className={style.navContainer}>
       <Link href={'/home'}>
         <img
-          src={Logo.src}
+          src={Logo}
           alt='Logo'
           className={`${style.navLogo} ${!navOpen && style.small}`}
         />

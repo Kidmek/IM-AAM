@@ -1,15 +1,16 @@
 'use client'
 
 import Link from 'next/link'
+import { Logo, profile } from '../../constants/images'
+
 import {
   AlignIcon_SVG,
-  Logo,
   MenuIcon_SVG,
   NoNotificationIcon_SVG,
   NotificationIcon_SVG,
-  profile,
   SearchIcon_SVG,
-} from '../../constants/images'
+} from '@/constants/icons'
+
 import style from './header.module.css'
 
 import { usePathname } from 'next/navigation'
@@ -24,7 +25,7 @@ export default function Header({ toggleNav, navOpen, noSideBar }: Props) {
   return (
     <div className={`${style.headerContainer} ${noSideBar && style.noSideBar}`}>
       {noSideBar ? (
-        <img alt='Logo' src={Logo.src} className={style.headerLogo} />
+        <img alt='Logo' src={Logo} className={style.headerLogo} />
       ) : (
         <div>
           <AlignIcon_SVG
@@ -78,7 +79,7 @@ export default function Header({ toggleNav, navOpen, noSideBar }: Props) {
             </Link>
             <Link href={'/profile'}>
               <img
-                src={profile.src}
+                src={profile}
                 alt='Profile Image'
                 className={style.profileImg}
               />

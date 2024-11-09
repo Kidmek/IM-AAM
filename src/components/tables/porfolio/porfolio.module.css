@@ -147,6 +147,10 @@
   color: rgb(80, 80, 227);
 }
 
+.lightGreen {
+  color: rgba(55, 118, 29, 1);
+}
+
 .green {
   color: var(--green);
 }
@@ -171,8 +175,8 @@
   position: relative;
 }
 
-.line.blue {
-  background-color: rgb(80, 80, 227);
+.line.lightGreen {
+  background-color: rgba(55, 118, 29, 1);
 }
 
 .line.green {

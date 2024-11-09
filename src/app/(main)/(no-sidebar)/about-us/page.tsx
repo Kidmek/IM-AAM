@@ -18,7 +18,7 @@ export default function AboutUs() {
             <CustomButton label='Learn More' />
           </div>
         </div>
-        <img alt='celebrate' src={celebrate.src} className={style.aboutImg} />
+        <img alt='celebrate' src={celebrate} className={style.aboutImg} />
       </div>
       <div className={style.horizontal}>
         <div className={`${style.vertical} ${style.second}`}>
@@ -27,10 +27,10 @@ export default function AboutUs() {
           maximise your earnings and help you earn quickly as well as minimise
           financial loss.
         </div>
-        <img alt='robot' src={robot.src} className={style.aboutImg} />
+        <img alt='robot' src={robot} className={style.aboutImg} />
       </div>
       <div className={`${style.vertical} ${style.centered}`}>
-        <img alt='finance' src={finance.src} className={style.aboutImg} />
+        <img alt='finance' src={finance} className={style.aboutImg} />
 
         <div className={style.content}>
           Our approach helps investors identify undervalue stocks with strong
@@ -41,7 +41,7 @@ export default function AboutUs() {
         </div>
       </div>
       <div className={`${style.vertical} ${style.centered}`}>
-        <img alt='bull' src={bull.src} className={style.aboutImg} />
+        <img alt='bull' src={bull} className={style.aboutImg} />
 
         <div className={style.content}>
           Our service helps you find stocks categorised as bullish stocks for

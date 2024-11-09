@@ -5,7 +5,7 @@ import {
   Tiktok_SVG,
   Twitter_SVG,
   Youtube_SVG,
-} from '@/constants/images'
+} from '@/constants/icons'
 
 import style from './footer.module.css'
 

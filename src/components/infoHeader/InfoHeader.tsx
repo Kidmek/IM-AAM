@@ -1,4 +1,4 @@
-import { InfoIcon_SVG } from '@/constants/images'
+import { InfoIcon_SVG } from '@/constants/icons'
 import style from './infoHeader.module.css'
 
 type Props = {

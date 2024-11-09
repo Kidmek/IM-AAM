@@ -3,7 +3,7 @@ import {
   LogoutIcon_SVG,
   PieIcon_SVG,
   SettingIcon_SVG,
-} from './images'
+} from './icons'
 
 export const NavElements = [
   {

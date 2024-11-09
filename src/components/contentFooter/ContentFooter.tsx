@@ -1,4 +1,4 @@
-import { DropDownIcon_SVG } from '../../constants/images'
+import { DropDownIcon_SVG } from '@/constants/icons'
 
 import style from './contentFooter.module.css'
 

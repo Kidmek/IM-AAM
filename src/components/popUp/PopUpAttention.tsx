@@ -5,7 +5,7 @@ import style from './popup.module.css'
 export default function PopUpAttention() {
   return (
     <div className={style.popUpContainer}>
-      <img src={PopUp2Top.src} alt='Image' className={style.popUpImage} />
+      <img src={PopUp2Top} alt='Image' className={style.popUpImage} />
       <p>
         <span className={`${style.popUpAttention} fw-700`}>
           Attention New Users:
@@ -52,7 +52,7 @@ export default function PopUpAttention() {
         market.&#x2028;
       </p>
       <div className={style.popUpButton}>
-        <img src={PopUp2Bottom.src} alt='Image' className={style.popUpImage} />
+        <img src={PopUp2Bottom} alt='Image' className={style.popUpImage} />
         <CustomButton
           label='Get Started Today'
           bgColor='var(--green)'

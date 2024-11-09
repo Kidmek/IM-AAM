@@ -7,7 +7,7 @@ import CustomButton from '@/components/button/CustomButton'
 import style from '../auth.module.css'
 import Link from 'next/link'
 import { validateEmail } from '@/constants/validation'
-import { BackIcon_SVG } from '@/constants/images'
+import { BackIcon_SVG } from '@/constants/icons'
 
 export default function ForgotPass() {
   const [user, setUser] = useState({ email: '' })

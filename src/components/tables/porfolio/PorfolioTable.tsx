@@ -1,20 +1,17 @@
 import { positionHeaders, positionToolTip } from '@/constants/strings/position'
-import {
-  FilterIcon_SVG,
-  HelpIcon_SVG,
-  MapPin_SVG,
-} from '../../../constants/images'
+import { FilterIcon_SVG, HelpIcon_SVG, MapPin_SVG } from '@/constants/icons'
 
 import style from './porfolio.module.css'
 import TableHeader from '@/components/contentHeader/TableHeader'
 
 export default function PortfolioTable({ title }: { title: string }) {
   const renderMomentumLine = (days: string, option: string, color?: string) => {
+    const colorClassName = `${color && style[color]}`
     return (
       <div className={style.quarter}>
-        <div className={style.blue}>{days}</div>
-        <div className={`${style.line} ${color && style[color]}`}></div>
-        <div className={style.blue}>{option}</div>
+        <div className={colorClassName}>{days}</div>
+        <div className={`${style.line} ${colorClassName}`}></div>
+        <div className={colorClassName}>{option}</div>
       </div>
     )
   }
@@ -30,7 +27,7 @@ export default function PortfolioTable({ title }: { title: string }) {
           <MapPin_SVG />
         </div>
         {renderMomentumLine('0d', 'Buy')}
-        {renderMomentumLine('50d', 'Buy', 'blue')}
+        {renderMomentumLine('50d', 'Buy', 'lightGreen')}
 
         {renderMomentumLine('75d', 'Sell', 'green')}
         {renderMomentumLine('100d', 'Buy', 'green')}

@@ -1,6 +1,6 @@
 'use client'
 
-import { CloseIcon_SVG } from '../../constants/images'
+import { CloseIcon_SVG } from '@/constants/icons'
 import style from './dialog.module.css'
 type Props = {
   child: JSX.Element

@@ -5,7 +5,7 @@ import CustomInput from '@/components/inputs/CustomInput'
 import CustomButton from '@/components/button/CustomButton'
 
 import style from '../auth.module.css'
-import { BackIcon_SVG } from '@/constants/images'
+import { BackIcon_SVG } from '@/constants/icons'
 import { useRouter } from 'next/navigation'
 
 export default function ResetPass() {

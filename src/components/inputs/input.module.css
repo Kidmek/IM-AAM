@@ -10,11 +10,20 @@
 }
 
 .inputContainer > input,
+.inputContainer .option,
+.inputContainer .selectedOption {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.inputContainer > input,
 .dropDownSelect {
-  border: 1px solid var(--border-dark-gray);
+  border-width: 0;
   border-radius: 8px;
   padding: 14px 10px;
   line-height: 20px;
+  background: rgba(237, 237, 237, 1);
+  min-height: 50px;
 }
 
 .formLabel,
@@ -28,30 +37,39 @@
 }
 
 .customSelect {
-  min-width: 345px;
   position: relative;
 }
 
 .inputContainer option {
   appearance: none;
 }
+
 .dropDownIcon {
   position: absolute;
   right: 10px;
   top: 10px;
 }
 
+.rotate {
+  transform: rotate(180deg);
+}
+
 .optionContainer {
   display: flex;
+  position: absolute;
   flex-direction: column;
   border: 1px solid var(--border-gray);
   border-radius: 4px;
   margin-top: 8px;
+  z-index: 1000;
+  background: white;
+  width: 100%;
 }
 
 .option {
   padding: 10px;
   border-bottom: 1px solid var(--border-gray);
+  cursor: pointer;
 }
 
 .option:last-child {
@@ -65,4 +83,9 @@
 .inputContainer input.inputError {
   border: 1px solid red !important;
   margin-bottom: 5px;
+}
+
+.selected {
+  background: var(--green);
+  color: white;
 }

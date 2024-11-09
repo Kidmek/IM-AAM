@@ -5,7 +5,7 @@ import CustomButton from '../button/CustomButton'
 export default function InsufficientPopUp() {
   return (
     <div className={`${style.popUpContainer} ${style.insufficientPopUp}`}>
-      <img src={Insuffient.src} alt='Insuffient' />
+      <img src={Insuffient} alt='Insuffient' />
 
       <p className='fw-700'>Insufficient Balance</p>
       <p>

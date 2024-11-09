@@ -1,0 +1,185 @@
+.container {
+  padding-top: 11px;
+  padding-inline: 28px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 11px;
+}
+
+.smaller {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.body {
+  display: flex;
+  gap: 47px;
+  width: 100%;
+}
+
+.body > div {
+  width: 100%;
+}
+
+.card {
+  border: 1px solid rgba(174, 174, 174, 1);
+  border-radius: 5px;
+  height: fit-content;
+}
+
+/*  Credit Card */
+
+.card.creditCard {
+  padding-inline: 48px;
+  padding-top: 29px;
+  padding-bottom: 38px;
+}
+
+.card.creditCard > div:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 9px;
+}
+
+.cardsContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin-bottom: 37px;
+}
+
+.inputs > .row {
+  display: flex;
+  gap: 13px;
+}
+
+/*  */
+
+/* Complete Payment */
+.card.completePayment {
+  padding-inline: 52px;
+  padding-top: 17px;
+  padding-bottom: 34px;
+}
+
+.innerBody {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card.completePayment > div:first-of-type {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.amountContainer > div:first-of-type {
+  margin-bottom: 22px;
+}
+
+.amountContainer > div:nth-of-type(2) {
+  color: rgba(146, 146, 146, 0.7);
+  font-family: Poppins;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.amountView {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.amountView > div:last-of-type {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.ticksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-bottom: 24px;
+}
+
+.singleTick {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/*  */
+
+/* Payment Options */
+.card.paymentOption {
+  padding-inline: 21px;
+  padding-block: 15px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.circleCheckBox {
+  width: 26px;
+  height: 26px;
+  border-color: rgba(174, 174, 174, 1);
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.circleCheckBox.selected {
+  background-color: var(--green);
+  border: none;
+}
+/*  */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-inline: 0;
+    padding-top: 27px;
+  }
+
+  .body {
+    flex-direction: column;
+  }
+
+  .card.creditCard {
+    padding-inline: 29px;
+    padding-top: 20px;
+    padding-bottom: 67px;
+  }
+  .card.completePayment {
+    padding-inline: 25px;
+    padding-top: 31px;
+    padding-bottom: 49px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding-inline: 24px;
+  }
+}

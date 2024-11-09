@@ -13,7 +13,7 @@ export default function EmailVerification() {
         <div className={style.emailBody}>
           <div className={style.emailTitle}>
             <div>Dear [User&apos;s Name],</div>
-            <img src={Email1.src} alt='Email' />
+            <img src={Email1} alt='Email' />
           </div>
           <div>
             Welcome to IM-AAM – your ultimate destination for unlocking the
@@ -52,7 +52,7 @@ export default function EmailVerification() {
                 </div>
               </div>
             </div>
-            <img src={Email2.src} alt='Email' />
+            <img src={Email2} alt='Email' />
           </div>
           <div>
             Simply click the link below to activate your IM-AAM account and

@@ -18,7 +18,13 @@ export default function ProfilePage() {
           tabs={['Profile', 'Payment', 'Deposit']}
         />
       </div>
-      {tab === 0 ? <Profile /> : tab === 1 ? <Payment /> : <Deposit />}
+      {tab === 0 ? (
+        <Profile />
+      ) : tab === 1 ? (
+        <Payment />
+      ) : (
+        <Payment isDeposit />
+      )}
     </div>
   )
 }

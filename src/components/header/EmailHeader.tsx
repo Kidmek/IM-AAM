@@ -8,7 +8,7 @@ export default function EmailHeader() {
   return (
     <div className={style.emailHeader}>
       <div className={style.emailHeaderWrapper}>
-        <img alt='Logo' src={Logo.src} />
+        <img alt='Logo' src={Logo} />
         <div>{Moto}</div>
       </div>
     </div>

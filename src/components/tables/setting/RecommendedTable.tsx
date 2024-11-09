@@ -1,4 +1,4 @@
-import { FilterIcon_SVG } from '@/constants/images'
+import { FilterIcon_SVG } from '@/constants/icons'
 import { recommendedStocks } from '@/constants/strings/setting'
 import style from './setting.module.css'
 

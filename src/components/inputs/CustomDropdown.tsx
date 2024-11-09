@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { DropDownIcon_SVG } from '../../constants/images'
+import { DropDownIcon_SVG } from '@/constants/icons'
 import style from './input.module.css'
 
 interface Props {
@@ -11,6 +11,7 @@ interface Props {
   options: { value: string; label: string }[]
   placeholder?: string
   isForm?: boolean
+  name?: string
 }
 
 export default function CustomDrowpdown({
@@ -20,6 +21,7 @@ export default function CustomDrowpdown({
   options,
   placeholder,
   isForm,
+  name,
 }: Props) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -39,7 +41,9 @@ export default function CustomDrowpdown({
             {state ?? placeholder}
           </div>
 
-          <DropDownIcon_SVG className={style.dropDownIcon} />
+          <DropDownIcon_SVG
+            className={`${style.dropDownIcon} ${isOpen && style.rotate}`}
+          />
         </div>
 
         {isOpen && (
@@ -52,7 +56,8 @@ export default function CustomDrowpdown({
                     state === o.value && style.selected
                   }`}
                   onClick={() => {
-                    setState(o.value)
+                    setState(o.value, name)
+                    setIsOpen(!isOpen)
                   }}
                 >
                   {o.label}

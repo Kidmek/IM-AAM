@@ -1,18 +1,19 @@
 'use client'
 
-import { ArrowUp_SVG, Logo } from '../../constants/images'
+import { Logo } from '@/constants/images'
 import style from './footer.module.css'
 import { Moto } from '@/constants/strings/common'
 import Link from 'next/link'
 
 import { usePathname } from 'next/navigation'
+import { ArrowUp_SVG } from '@/constants/icons'
 
 export default function Footer() {
   const path = usePathname()
   return (
     <div className={style.footerContainer}>
       <div className={style.footerLogoContainer}>
-        <img alt='Logo' src={Logo.src} />
+        <img alt='Logo' src={Logo} />
         <div>{Moto}</div>
       </div>
       <div className={style.footerMiddle}>

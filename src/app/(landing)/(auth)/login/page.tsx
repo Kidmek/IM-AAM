@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import CustomInput from '@/components/inputs/CustomInput'
-import { Apple_SVG, Google_SVG } from '@/constants/images'
+import { Apple_SVG, Google_SVG } from '@/constants/icons'
 import CustomButton from '@/components/button/CustomButton'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'

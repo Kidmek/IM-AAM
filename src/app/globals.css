@@ -93,6 +93,19 @@ p {
   text-align: center;
 }
 
+.text-sm {
+  font-size: 14px;
+}
+.text-md {
+  font-size: 16px;
+}
+.text-xmd {
+  font-size: 18px;
+}
+.text-l {
+  font-size: 20px;
+}
+
 .text-end {
   text-align: end;
 }

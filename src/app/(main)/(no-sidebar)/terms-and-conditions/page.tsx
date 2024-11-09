@@ -24,7 +24,7 @@ export default function TermsAndConditions() {
                 )}
               </div>
               <img
-                src={item.image.src}
+                src={item.image}
                 alt='Image'
                 style={{
                   width: 'auto',

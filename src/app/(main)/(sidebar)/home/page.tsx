@@ -1,16 +1,9 @@
 'use client'
 
-import {
-  Crypto_SVG,
-  Home1,
-  Home2,
-  Home3,
-  Home4,
-  Home5,
-  HomeQR,
-  NFT_SVG,
-  Stock_SVG,
-} from '@/constants/images'
+import { Home1, Home2, Home3, Home4, Home5, HomeQR } from '@/constants/images'
+
+import { Crypto_SVG, NFT_SVG, Stock_SVG } from '@/constants/icons'
+
 import style from './page.module.css'
 import { useState } from 'react'
 import Dialog from '@/components/dialog/Dialog'
@@ -44,7 +37,7 @@ export default function Home() {
           </div>
           <div className={style.qr}>
             <div>Scan and Invest</div>
-            <img src={HomeQR.src} alt='QR' />
+            <img src={HomeQR} alt='QR' />
           </div>
 
           <div>One platform. Multiple investment opportunities.</div>
@@ -65,16 +58,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <img src={Home1.src} alt='chart' />
+        <img src={Home1} alt='chart' />
       </div>
       <div className={style.homeImages}>
         <div>
-          <img src={Home2.src} alt='chart' />
-          <img src={Home3.src} alt='chart' />
+          <img src={Home2} alt='chart' />
+          <img src={Home3} alt='chart' />
         </div>
         <div>
-          <img src={Home4.src} alt='chart' />
-          <img src={Home5.src} alt='chart' />
+          <img src={Home4} alt='chart' />
+          <img src={Home5} alt='chart' />
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@
   border-bottom: 1px solid var(--border-gray);
   text-align: center;
   flex: 1;
-  padding: 10px 0;
+  padding: 20px 0;
   cursor: pointer;
 }
 
@@ -93,10 +93,6 @@
 /*  */
 
 @media screen and (max-width: 720px) {
-  .tab.noTitle {
-    font-size: 18px;
-    line-height: 30px;
-  }
   .contentHeaderTitle {
     padding-inline: 24px;
   }
