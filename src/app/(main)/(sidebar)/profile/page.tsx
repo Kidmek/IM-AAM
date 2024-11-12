@@ -5,7 +5,6 @@ import style from './page.module.css'
 import Tabs from '@/components/contentHeader/Tabs'
 import Profile from '@/components/profile/Profile'
 import Payment from '@/components/profile/Payment'
-import Deposit from '@/components/profile/Deposit'
 
 export default function ProfilePage() {
   const [tab, setTab] = useState(0)

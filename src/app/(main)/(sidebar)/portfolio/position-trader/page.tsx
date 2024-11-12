@@ -20,13 +20,16 @@ export default function PositionTrader() {
         />
       )}
       <Tabs
-        title='Porfolio'
         selected={tab}
         setSelected={setTab}
         tabs={['Overview', 'Porfolio Setting']}
       />
 
-      {tab === 0 ? <PortfolioTable title='Porfolio' /> : <Settings inner />}
+      {tab === 0 ? (
+        <PortfolioTable title='Position Trader' />
+      ) : (
+        <Settings inner />
+      )}
     </>
   )
 }

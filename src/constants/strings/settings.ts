@@ -12,13 +12,7 @@ export const tooltips = {
   country: [
     {
       title: 'Preferred Countries for Investment:',
-      tip: `Your choice of countries for investment provides valuable insight into your geographical preferences and investment objectives. By knowing which countries you're interested in, our app can suggest stocks from those regions that align with your investment strategy and goals.
-`,
-    },
-    {
-      title: 'Downsides of Not Providing This Information:',
-      tip: `Without knowing your preferred countries for investment, our app may provide recommendations that are not aligned with your geographical preferences or may overlook opportunities in regions of interest to you.
-This lack of information could result in a less tailored investment strategy, potentially leading to missed opportunities for diversification or exposure to specific markets or industries.
+      tip: `You can select which of the indices from the countries listed below will be displayed on your portfolio page
 `,
     },
   ],
@@ -26,6 +20,14 @@ This lack of information could result in a less tailored investment strategy, po
     {
       title: 'Offered Recomended Stocks:',
       tip: `Be smart about picking your stocks. It’s best to spread your investments across different countries and industries. The price we offer depends on how quickly you can buy the recommended stocks. Acting fast means you can get them at a better price. As time goes on, we think the stock prices will go up, so if you wait too long, you might not make as much profit. `,
+    },
+  ],
+  brokerage: [
+    {
+      title: 'Brokerage Fee:',
+      tip: `We will assist you in calculating your expected net profit by subtracting the brokerage fee. Simply enter the brokerage fee for each country you've selected, either as a rate per transaction or the minimum fee charged by your broker.
+
+The minimum brokerage fee applies when the total brokerage cost, based on the rate, is less than the set minimum fee. For example, if a stock is priced at $20 and bought in a lot of 5, the brokerage fee would be calculated as $20 x 5 x 4% = $2. Since this is below the minimum fee of $3.67, the minimum fee is charged. However, if the lot size increases to 10, the brokerage fee becomes $20 x 10 x 4% = $8, which exceeds the minimum rate, so $8 is charged.`,
     },
   ],
 }

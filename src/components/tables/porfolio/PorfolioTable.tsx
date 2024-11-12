@@ -1,8 +1,7 @@
-import { positionHeaders, positionToolTip } from '@/constants/strings/position'
+import { positionHeaders } from '@/constants/strings/position'
 import { FilterIcon_SVG, HelpIcon_SVG, MapPin_SVG } from '@/constants/icons'
 
 import style from './porfolio.module.css'
-import TableHeader from '@/components/contentHeader/TableHeader'
 
 export default function PortfolioTable({ title }: { title: string }) {
   const renderMomentumLine = (days: string, option: string, color?: string) => {
@@ -36,9 +35,8 @@ export default function PortfolioTable({ title }: { title: string }) {
   }
   return (
     <div className={style.container}>
-      <TableHeader title={title} />
       <div className={style.tableContainer}>
-        <p>Recommended</p>
+        <p>{title}</p>
         <table>
           <thead>
             <tr>
@@ -66,20 +64,9 @@ export default function PortfolioTable({ title }: { title: string }) {
                               }`}
                             />
                             <div className={style.tooltiptext}>
-                              {positionToolTip.map((t, index) => {
-                                return (
-                                  <div key={index}>
-                                    <span
-                                      className={`${style.tooltipTitle} ${
-                                        index > 0 ? style.topMargin : ''
-                                      }`}
-                                    >
-                                      {t.title}
-                                    </span>
-                                    {t.tip}
-                                  </div>
-                                )
-                              })}
+                              {h.tooltip.length > 0 && (
+                                <div key={index}>{h.tooltip}</div>
+                              )}
                             </div>
                           </div>
                         )}

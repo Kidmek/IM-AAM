@@ -16,7 +16,13 @@ export default function Home() {
     <div className={style.homeContainer}>
       {popUpShown && (
         <Dialog
-          child={popUpShown === 1 ? <PopUp1 /> : <PopUpAttention />}
+          child={
+            popUpShown === 1 ? (
+              <PopUp1 />
+            ) : (
+              <PopUpAttention onClose={() => setPopUpShown(null)} />
+            )
+          }
           onClose={() => {
             setPopUpShown(null)
             setTimeout(() => {

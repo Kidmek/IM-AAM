@@ -1,5 +1,5 @@
 import { FilterIcon_SVG } from '@/constants/icons'
-import { recommendedStocks } from '@/constants/strings/setting'
+import { recommendedStocks } from '@/constants/strings/recommended'
 import style from './setting.module.css'
 
 export default function RecommendedTable() {

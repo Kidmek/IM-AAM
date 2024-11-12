@@ -19,8 +19,8 @@ export default function Settings({ inner }: { inner?: boolean }) {
       {/* Offered Recommended Stocks */}
       <div>
         <InfoHeader
-          title='Offered Recommended Stocks'
-          info={tooltips.recommended}
+          title='Brokerage Fee Per Country'
+          info={tooltips.brokerage}
         />
         <BrokerageFeeTable />
       </div>

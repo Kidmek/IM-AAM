@@ -26,7 +26,7 @@ export default function BrokerageFeeTable() {
                 minWidth: '20%',
               }}
             >
-              Maximum
+              Rate
             </th>
             <th
               style={{

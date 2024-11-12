@@ -2,7 +2,11 @@ import { PopUp2Bottom, PopUp2Top } from '@/constants/images'
 import CustomButton from '../button/CustomButton'
 import style from './popup.module.css'
 
-export default function PopUpAttention() {
+type Props = {
+  onClose: () => void
+}
+
+export default function PopUpAttention({ onClose }: Props) {
   return (
     <div className={style.popUpContainer}>
       <img src={PopUp2Top} alt='Image' className={style.popUpImage} />
@@ -57,7 +61,7 @@ export default function PopUpAttention() {
           label='Get Started Today'
           bgColor='var(--green)'
           txtColor='white'
-          onClick={() => {}}
+          onClick={onClose}
           variant='bold'
         />
       </div>
