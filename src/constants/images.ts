@@ -36,6 +36,7 @@ const notification4 = '/assets/notification/4.png'
 // Email
 const Email1 = '/assets/email/email_1.png'
 const Email2 = '/assets/email/email_2.png'
+const Invoice = '/assets/email/invoice.png'
 
 // Home
 const Home1 = '/assets/home/home1.png'
@@ -103,6 +104,7 @@ export {
   //
   Email1,
   Email2,
+  Invoice,
   //
   profile,
   Logo,

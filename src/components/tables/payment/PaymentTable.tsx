@@ -1,5 +1,6 @@
 import { PreviousIcon_SVG } from '@/constants/icons'
 import style from './paymentTable.module.css'
+import Link from 'next/link'
 
 type Props = {
   pageInfo: {
@@ -42,7 +43,11 @@ export default function PaymentTable({ pageInfo, onPageChange }: Props) {
                   <td>{d.email}</td>
                   <td>{d.label}</td>
                   <td>{d.amount}</td>
-                  <td className={style.link}>{d.invoice}</td>
+                  <td className={style.link}>
+                    <Link href={'/invoice'} target='_blank'>
+                      {d.invoice}
+                    </Link>
+                  </td>
                 </tr>
               )
             })}

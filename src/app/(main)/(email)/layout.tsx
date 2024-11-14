@@ -6,11 +6,11 @@ export default function EmailLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div>
+    <>
       <EmailHeader />
 
       <div className={style.pageContent}>{children}</div>
       <EmailFooter />
-    </div>
+    </>
   )
 }

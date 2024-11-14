@@ -18,6 +18,7 @@
   background-color: white;
   flex: 1;
   height: 100%;
+  display: flex;
 }
 
 .noSideBarContainer > .pageContent {
