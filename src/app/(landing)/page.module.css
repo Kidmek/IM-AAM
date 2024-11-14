@@ -45,21 +45,27 @@
 
 .landingBody button {
   background: linear-gradient(180deg, #008a3d 35.62%, #256541 68.44%);
-  /* width: 222px; */
-  /* height: 55px; */
-  border-radius: 29px;
+  border-radius: 10px;
   font-size: 24px;
   padding-inline: 77px;
   padding-block: 9.5px;
   color: white;
 }
 
-.landingBody div:nth-of-type(2) {
+.btnContainer {
   display: flex;
+  flex-direction: column;
   gap: 50px;
-  padding-bottom: 93px;
 }
 
+.btnContainer > div {
+  display: flex;
+  gap: 50px;
+}
+.btnContainer p {
+  color: var(--green);
+  text-decoration: underline;
+}
 .landingBottom {
   height: 59px;
   background: var(--green);

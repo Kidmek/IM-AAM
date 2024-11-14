@@ -1,9 +1,16 @@
 import { positionHeaders } from '@/constants/strings/position'
 import { FilterIcon_SVG, HelpIcon_SVG, MapPin_SVG } from '@/constants/icons'
 
-import style from './porfolio.module.css'
+import style from './porfolioTable.module.css'
+import ContentFooter from '@/components/contentFooter/ContentFooter'
+import { Chart } from '@/constants/images'
+import { useState } from 'react'
+import ChartPopup from '@/components/popUp/ChartPopup'
+import Dialog from '@/components/dialog/Dialog'
 
 export default function PortfolioTable({ title }: { title: string }) {
+  const [popUpShown, setPopUpShown] = useState(true)
+
   const renderMomentumLine = (days: string, option: string, color?: string) => {
     const colorClassName = `${color && style[color]}`
     return (
@@ -35,6 +42,13 @@ export default function PortfolioTable({ title }: { title: string }) {
   }
   return (
     <div className={style.container}>
+      {!popUpShown && (
+        <Dialog
+          child={<ChartPopup />}
+          onClose={() => setPopUpShown(true)}
+          maxWidth='fit-content'
+        />
+      )}
       <div className={style.tableContainer}>
         <p>{title}</p>
         <table>
@@ -63,11 +77,11 @@ export default function PortfolioTable({ title }: { title: string }) {
                                 hasBoth && style.absolute
                               }`}
                             />
-                            <div className={style.tooltiptext}>
-                              {h.tooltip.length > 0 && (
+                            {h.tooltip && h.tooltip.length > 0 && (
+                              <div className={style.tooltiptext}>
                                 <div key={index}>{h.tooltip}</div>
-                              )}
-                            </div>
+                              </div>
+                            )}
                           </div>
                         )}
                         {!h.filter_disabled ? (
@@ -93,8 +107,31 @@ export default function PortfolioTable({ title }: { title: string }) {
               return (
                 <tr key={index}>
                   {t.map((h, index) => {
-                    if (index == 0) {
+                    if (index === 0) {
                       return <td key={index}>{renderMomentum(80)}</td>
+                    } else if (index + 1 === positionHeaders.length) {
+                      return (
+                        <td key={index}>
+                          <div
+                            style={{
+                              display: 'flex',
+                              gap: '26px',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                            }}
+                          >
+                            <img
+                              src={Chart}
+                              alt='chart'
+                              style={{
+                                cursor: 'pointer',
+                              }}
+                              onClick={() => setPopUpShown(false)}
+                            />
+                            {h.value}
+                          </div>
+                        </td>
+                      )
                     }
                     return <td key={index}>{h.value}</td>
                   })}
@@ -104,6 +141,7 @@ export default function PortfolioTable({ title }: { title: string }) {
           </tbody>
         </table>
       </div>
+      <ContentFooter />
     </div>
   )
 }

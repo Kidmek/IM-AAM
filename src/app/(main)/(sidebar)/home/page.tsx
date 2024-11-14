@@ -1,26 +1,42 @@
 'use client'
 
-import { Home1, Home2, Home3, Home4, Home5, HomeQR } from '@/constants/images'
-
-import { Crypto_SVG, NFT_SVG, Stock_SVG } from '@/constants/icons'
+import { Home1, Home2, Home3, Home4 } from '@/constants/images'
 
 import style from './page.module.css'
 import { useState } from 'react'
 import Dialog from '@/components/dialog/Dialog'
-import PopUp1 from '@/components/popUp/PopUp1'
-import PopUpAttention from '@/components/popUp/PopUpAttention'
+import GuestPopup from '@/components/popUp/GuestPopup'
+import AttentionPopup from '@/components/popUp/AttentionPopup'
+import { getToken } from '@/api/apiConfig'
+import WelcomePopup from '@/components/popUp/WelcomePopup'
 
 export default function Home() {
   const [popUpShown, setPopUpShown] = useState<1 | 2 | null>(1)
+
+  const renderHomeRow = (content: string, image: string, title?: string) => {
+    return (
+      <div className={`${style.singleRow} ${!title && style.reversed}`}>
+        <div>
+          <div className={style.title}>{title}</div>
+          <div>{content}</div>
+        </div>
+        <img src={image} alt='Home Image' />
+      </div>
+    )
+  }
   return (
     <div className={style.homeContainer}>
       {popUpShown && (
         <Dialog
           child={
-            popUpShown === 1 ? (
-              <PopUp1 />
+            getToken() && popUpShown ? (
+              popUpShown == 1 ? (
+                <WelcomePopup />
+              ) : (
+                <AttentionPopup onClose={() => setPopUpShown(null)} />
+              )
             ) : (
-              <PopUpAttention onClose={() => setPopUpShown(null)} />
+              <GuestPopup />
             )
           }
           onClose={() => {
@@ -33,49 +49,26 @@ export default function Home() {
           }}
         />
       )}
-      <div className={style.homeTop}>
-        <div>
-          <div className={style.homeTitle}>
-            Your financial success is our Success
-          </div>
-          <div className={style.homeDesc}>
-            Everyone is charged their share Say hello to multiplayer payment
-          </div>
-          <div className={style.qr}>
-            <div>Scan and Invest</div>
-            <img src={HomeQR} alt='QR' />
-          </div>
-
-          <div>One platform. Multiple investment opportunities.</div>
-          <div className={style.homeIcons}>
-            <div>
-              <Stock_SVG />
-              <div>STOCKS</div>
-            </div>
-            <div className={style.iconDivider}></div>
-            <div>
-              <NFT_SVG />
-              <div>NFT</div>
-            </div>
-            <div className={style.iconDivider}></div>
-            <div>
-              <Crypto_SVG />
-              <div>CRYPTO</div>
-            </div>
-          </div>
-        </div>
-        <img src={Home1} alt='chart' />
-      </div>
-      <div className={style.homeImages}>
-        <div>
-          <img src={Home2} alt='chart' />
-          <img src={Home3} alt='chart' />
-        </div>
-        <div>
-          <img src={Home4} alt='chart' />
-          <img src={Home5} alt='chart' />
-        </div>
-      </div>
+      <p className={style.title}>How to Win with Our Stock Recommendations</p>
+      {renderHomeRow(
+        'Purchase our expertly curated stock recommendations to see which stocks are primed for growth.',
+        Home1,
+        'Get Insider Knowledge:'
+      )}
+      {renderHomeRow(
+        'With our guidance in hand, head to your stockbroker and purchase the recommended stock(s) while prices are low.',
+        Home2,
+        'Buy Your Stock:'
+      )}
+      {renderHomeRow(
+        'Sit back and let the market work for you as stock prices go up. Enjoy watching your smart investments pay off!',
+        Home3,
+        'Watch Your Gains Grow:'
+      )}
+      {renderHomeRow(
+        'Make Your Money Work Smarter – Start with the Right Information',
+        Home4
+      )}
     </div>
   )
 }

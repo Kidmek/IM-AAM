@@ -1,9 +1,12 @@
 // Tips
-const tipsHeader1 = '/assets/tips/tip_header_1.png'
-const tipsHeader2 = '/assets/tips/tip_header_2.png'
-const tip = '/assets/tips/tip.png'
-const strategy = '/assets/tips/strategy.png'
-const chart = '/assets/tips/chart.png'
+const tipsHeaderImg = '/assets/tips/header.png'
+const tip2 = '/assets/tips/tip2.png'
+const tip3 = '/assets/tips/tip3.png'
+const tip4 = '/assets/tips/tip4.png'
+
+const strategy1 = '/assets/tips/strategy1.png'
+const strategy2 = '/assets/tips/strategy2.png'
+const strategy3 = '/assets/tips/strategy3.png'
 
 // Terms
 const terms0 = '/assets/terms/terms0.png'
@@ -35,34 +38,44 @@ const Email1 = '/assets/email/email_1.png'
 const Email2 = '/assets/email/email_2.png'
 
 // Home
-const Home1 = '/assets/home/home_1.png'
-const Home2 = '/assets/home/home_2.png'
-const Home3 = '/assets/home/home_3.png'
-const Home4 = '/assets/home/home_4.png'
-const Home5 = '/assets/home/home_5.png'
-const HomeQR = '/assets/home/home_qr.png'
+const Home1 = '/assets/home/home1.png'
+const Home2 = '/assets/home/home2.png'
+const Home3 = '/assets/home/home3.png'
+const Home4 = '/assets/home/home4.png'
 
 // Landing
 const Landing1 = '/assets/landing/landing.png'
 const LandingBg = '/assets/landing/landing_bg.png'
 
 // Pop up
-const PopUp1Top = '/assets/popup/popup_1t.png'
-const PopUp1Bottom = '/assets/popup/popup_1b.png'
-const PopUp2Top = '/assets/popup/popup_2t.png'
-const PopUp2Bottom = '/assets/popup/popup_2b.png'
+const WelcomePopup1 = '/assets/popup/welcome_popup1.png'
+const WelcomePopup2 = '/assets/popup/welcome_popup2.png'
+const AttentionPopup1 = '/assets/popup/attention_popup1.png'
+const AttentionPopup2 = '/assets/popup/attention_popup2.png'
 const Insuffient = '/assets/popup/insufficient.png'
+const WarningPopup1 = '/assets/popup/warning_popup1.png'
+const WarningPopup2 = '/assets/popup/warning_popup2.png'
+const WarningPopup3 = '/assets/popup/warning_popup3.png'
+
+const Purchase = '/assets/popup/purchase.png'
+const GuestPopup1 = '/assets/popup/guest_popup1.png'
+const GuestPopup2 = '/assets/popup/guest_popup2.png'
+const GuestPopup3 = '/assets/popup/guest_popup3.png'
+const GuestPopup4 = '/assets/popup/guest_popup4.png'
 
 // Profile and logo
 const profile = '/assets/profile.png'
 const Logo = '/logo.png'
+const Chart = '/assets/chart.png'
 
 export {
-  tip,
-  strategy,
-  tipsHeader1,
-  tipsHeader2,
-  chart,
+  tip2,
+  tip3,
+  tip4,
+  strategy1,
+  strategy2,
+  strategy3,
+  tipsHeaderImg,
   //
 
   //
@@ -97,16 +110,23 @@ export {
   Home2,
   Home3,
   Home4,
-  Home5,
-  HomeQR,
   //
   Landing1,
   LandingBg,
   //
-  PopUp1Top,
-  PopUp1Bottom,
-  PopUp2Top,
-  PopUp2Bottom,
+  WelcomePopup1,
+  WelcomePopup2,
+  AttentionPopup1,
+  AttentionPopup2,
   Insuffient,
+  WarningPopup1,
+  WarningPopup2,
+  WarningPopup3,
+  Purchase,
+  GuestPopup1,
+  GuestPopup2,
+  GuestPopup3,
+  GuestPopup4,
   //
+  Chart,
 }

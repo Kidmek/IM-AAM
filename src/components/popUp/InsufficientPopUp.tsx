@@ -1,8 +1,16 @@
+'use client'
+
 import style from './popup.module.css'
 import { Insuffient } from '@/constants/images'
 import CustomButton from '../button/CustomButton'
+import { useRouter } from 'next/navigation'
 
-export default function InsufficientPopUp() {
+type Props = {
+  onClose: () => void
+}
+export default function InsufficientPopUp({ onClose }: Props) {
+  const router = useRouter()
+
   return (
     <div className={`${style.popUpContainer} ${style.insufficientPopUp}`}>
       <img src={Insuffient} alt='Insuffient' />
@@ -17,8 +25,12 @@ export default function InsufficientPopUp() {
       </p>
 
       <div>
-        <CustomButton label='Top Up Now' variant='slim' />
-        <CustomButton label='Cancel' variant='slim' />
+        <CustomButton
+          label='Top Up Now'
+          variant='slim'
+          onClick={() => router.push('/profile/deposit')}
+        />
+        <CustomButton label='Cancel' variant='slim' onClick={onClose} />
       </div>
     </div>
   )

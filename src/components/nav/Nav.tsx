@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { NavElements } from '@/constants/nav'
 
 import Link from 'next/link'
+import { logout } from '@/api/apiConfig'
 
 export default function Nav({ navOpen }: { navOpen: boolean }) {
   const pathname = usePathname()
@@ -28,7 +29,12 @@ export default function Nav({ navOpen }: { navOpen: boolean }) {
           className={`${style.singleNav} ${found && style.selected} ${
             !navOpen && style.closed
           }`}
-          href={navSubElements.length ? navSubElements[0].path : path}
+          href={path}
+          onClick={() => {
+            if (text === 'Logout') {
+              logout()
+            }
+          }}
         >
           <Icon className={style.navIcon} />
           {navOpen && text}

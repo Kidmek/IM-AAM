@@ -1,0 +1,96 @@
+.settingRow > td {
+  padding: 1rem 0.5rem;
+}
+
+.tableContainer th {
+  padding: 1rem 2rem;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: var(--green);
+  color: white;
+  outline: 1px solid var(--table-border);
+  text-align: center;
+  padding: 12px 0.5rem;
+  line-height: 18px;
+}
+
+.tableContainer > table {
+  width: 100%;
+}
+/* Recommended */
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.tableContainer > p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--green);
+}
+
+.dataHeader > div {
+  padding: 10px;
+}
+
+.tableContainer th:first-child {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+.tableContainer th:last-child {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.tableContainer tbody tr:first-child td:first-child {
+  padding-top: 1rem;
+}
+
+.tableContainer td {
+  text-align: center;
+  color: var(--text-gray);
+  font-weight: 400;
+  font-size: 14px;
+  white-space: nowrap;
+  max-width: 600px;
+  padding-block: 8px;
+  padding-inline: 11px;
+}
+
+.tableContainer td > div {
+  justify-content: center;
+}
+.tableContainer thead > tr {
+  margin-bottom: 1rem;
+}
+
+.headerCell div {
+  width: 100%;
+}
+
+.headerIcons {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.filterIcon,
+.helpIcon {
+  color: white;
+  --size: 16px;
+  width: var(--size);
+  height: var(--size);
+}
+
+.helpIcon.absolute {
+  --size: 16px;
+  position: absolute;
+  top: calc((-1 * var(--size) + 1.5px));
+}
+
+.headerCell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

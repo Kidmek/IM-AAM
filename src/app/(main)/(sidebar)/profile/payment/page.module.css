@@ -1,0 +1,12 @@
+.container {
+  padding-block: 46px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.header {
+  padding-inline: 24px;
+  color: #171717;
+  margin-bottom: 34px;
+}

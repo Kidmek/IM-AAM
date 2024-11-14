@@ -1,6 +1,11 @@
 .contentHeaderContainer {
   width: 100%;
 }
+.contentHeaderContainer a {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
 
 .contentHeaderTitle {
   font-weight: 900;

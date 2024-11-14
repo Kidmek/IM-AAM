@@ -2,6 +2,7 @@ export const dailyHeaders = [
   {
     name: 'Technical Indicator',
     help: true,
+    tooltip: '',
     bold: true,
   },
   {
@@ -13,6 +14,7 @@ export const dailyHeaders = [
     color: '--table-light-gray',
     value: 'Lorem',
     help: true,
+    tooltip: '',
   },
   {
     name: 'Sector',
@@ -50,6 +52,7 @@ export const dailyHeaders = [
     color: '--light-green',
     value: '5 days',
     help: true,
+    tooltip: '',
   },
   {
     name: 'Target Profit%',
@@ -71,18 +74,21 @@ export const dailyHeaders = [
     color: '--table-light-gray',
     value: 'Undervalued',
     help: true,
+    tooltip: '',
   },
   {
     name: 'Technical Analysis Score',
     color: '--table-light-gray',
     value: '$ 4,525',
     help: true,
+    tooltip: '',
   },
   {
     name: 'Fundamental Analysis Score',
     color: '--table-light-gray',
     value: '$ 8,525',
     help: true,
+    tooltip: '',
     filter_disabled: true,
   },
   {
@@ -132,3 +138,14 @@ export const dailyHeaders = [
     value: 'N/A',
   },
 ]
+
+export const technicalIndicators = {
+  firstHalf: {
+    times: ['1 Minute', '5 Minute', '15 Minute'],
+    values: ['Buy', 'Strong Buy', 'Neutral'],
+  },
+  secondHalf: {
+    times: ['30 Minute', 'Hourly', 'Daily'],
+    values: ['Strong Sell', 'Sell', 'Neutral'],
+  },
+}

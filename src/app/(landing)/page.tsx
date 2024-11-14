@@ -19,12 +19,17 @@ export default function Landing() {
         <div className={style.landingBody}>
           <img src={Landing1} alt='Logo' />
           <div>Strategically grow your net asset value</div>
-          <div>
-            <Link href={'/login'}>
-              <button>Login</button>
-            </Link>
-            <Link href={'/registration'}>
-              <button>Register</button>
+          <div className={style.btnContainer}>
+            <div>
+              <Link href={'/login'}>
+                <button>Login</button>
+              </Link>
+              <Link href={'/registration'}>
+                <button>Register</button>
+              </Link>
+            </div>
+            <Link href={'/portfolio'}>
+              <p>Continue As Guest</p>
             </Link>
           </div>
         </div>

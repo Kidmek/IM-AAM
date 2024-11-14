@@ -1,0 +1,206 @@
+.container {
+  padding-block: 20px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.tableContainer > p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.tableContainer th {
+  outline: 1px solid var(--table-border);
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px 0.5rem;
+  line-height: 18px;
+}
+
+.dataHeader > div {
+  padding: 10px;
+}
+
+.tableContainer th:first-child {
+  border-top-left-radius: var(--border-radius);
+}
+.tableContainer th:last-child {
+  border-top-right-radius: var(--border-radius);
+}
+.tableContainer tbody tr:first-child td:first-child {
+  padding-top: 1rem;
+}
+
+.tableContainer td {
+  text-align: center;
+  color: var(--text-gray);
+  font-weight: 400;
+  font-size: 14px;
+  white-space: nowrap;
+  max-width: 600px;
+  padding-block: 8px;
+  padding-inline: 11px;
+  outline: 1px solid var(--table-border);
+}
+
+.tableContainer td > div {
+  justify-content: center;
+}
+.tableContainer thead > tr {
+  margin-bottom: 1rem;
+}
+
+.headerCell > .headerTitle {
+  width: 100%;
+}
+
+.headerIcons {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  background-color: white;
+  padding: 20px 25px;
+  border-radius: var(--border-radius);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  white-space: pre-line;
+  color: black;
+  z-index: 999;
+  width: 25vw;
+  right: -15vw;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.filterIcon,
+.helpIcon {
+  color: white;
+  --size: 16px;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+}
+
+.helpIcon.absolute {
+  --size: 16px;
+  position: absolute;
+  top: calc((-1 * var(--size) + 1.5px));
+}
+
+.headerCell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn {
+  background-color: var(--bright-green);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+
+.removeBtn {
+  background-color: var(--bright-red);
+}
+
+.momentum {
+  display: flex;
+  position: relative;
+}
+
+.momentum > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.first {
+  align-items: flex-start;
+}
+
+.blue {
+  color: rgb(80, 80, 227);
+}
+
+.lightGreen {
+  color: rgba(55, 118, 29, 1);
+}
+
+.green {
+  color: var(--green);
+}
+.quarter div:first-child {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.first div:first-child {
+  padding-left: 0;
+}
+
+.fourth div:first-child {
+  padding-right: 0;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  margin: 0.25rem 0;
+  background-color: var(--light-gray);
+  position: relative;
+}
+
+.line.lightGreen {
+  background-color: rgba(55, 118, 29, 1);
+}
+
+.line.green {
+  background-color: var(--green);
+}
+
+.locationPin {
+  position: absolute;
+  top: 1rem;
+  width: 7px;
+}
+
+/* Daily */
+
+.technical {
+  display: flex;
+  gap: 8px;
+}
+
+.technical > div {
+  text-align: left;
+}
+
+/*  */
+
+@media screen and (max-width: 720px) {
+  .container {
+    padding-inline: 24px;
+  }
+
+  .tooltiptext {
+    width: 90vw;
+    right: -50vw;
+  }
+}

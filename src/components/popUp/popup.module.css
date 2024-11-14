@@ -1,11 +1,11 @@
 .popUpContainer {
-  font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
   display: flex;
   flex-direction: column;
   gap: 26px;
+  color: #000;
 }
 
 .popUpContainer img {
@@ -27,23 +27,39 @@
 
 .riskBody {
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 25.5px;
-  color: rgba(107, 107, 107, 1);
 }
 
-.riskBody > span {
+.riskBody span {
   color: black;
+  font-weight: 600;
 }
 
-.checkBoxContainer {
+.riskBody div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 51px;
+  margin-bottom: 31px;
+  gap: 41px;
+}
+
+.btnContainer > p {
+  font-weight: 600;
+}
+
+.btnContainer > div {
   display: flex;
   gap: 25px;
-  margin-top: 51px;
-  flex-wrap: wrap;
-  margin-bottom: 31px;
+  max-width: 443px;
+  flex-direction: row;
 }
-
 /*  */
 .insufficientPopUp {
   gap: 0;
@@ -67,3 +83,27 @@
 }
 
 /*  */
+
+/* Guest */
+
+.singleContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+/*  */
+@media screen and (max-width: 500px) {
+  .btnContainer {
+    align-items: center;
+  }
+  .btnContainer > div {
+    flex-direction: column;
+    max-width: 206px;
+    width: 100%;
+  }
+
+  .attention > img {
+    width: 25vw;
+  }
+}

@@ -3,9 +3,9 @@
 import PortfolioTable from '@/components/tables/porfolio/PorfolioTable'
 import { useState } from 'react'
 import Tabs from '@/components/contentHeader/Tabs'
-import InsufficientPopUp from '@/components/popUp/InsufficientPopUp'
 import Dialog from '@/components/dialog/Dialog'
 import Settings from '@/components/settings/Settings'
+import InsufficientPopUp from '@/components/popUp/InsufficientPopup'
 
 export default function PositionTrader() {
   const [tab, setTab] = useState(0)
@@ -15,7 +15,7 @@ export default function PositionTrader() {
     <>
       {!popUpShown && (
         <Dialog
-          child={<InsufficientPopUp />}
+          child={<InsufficientPopUp onClose={() => setPopUpShown(true)} />}
           onClose={() => setPopUpShown(true)}
         />
       )}

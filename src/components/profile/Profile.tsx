@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import CustomButton from '../button/CustomButton'
 import CustomInput from '../inputs/CustomInput'

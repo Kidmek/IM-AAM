@@ -1,3 +1,5 @@
+import { strategy1, strategy2, strategy3, tip2, tip3, tip4 } from '../images'
+
 export const tipsHeader = `Follow our tips and strategies to help you manage your emotions and mindset during stock trading. The stock market is highly volatile and risky, and more people lose money than make it.
 
 While we can't guarantee profits, our expert advice offers you the chance to increase your chances of success and minimize losses by offering you the stocks that do actually carry values in their financial report we just noted as undervalued stocks.
@@ -7,8 +9,6 @@ export const tips = [
   {
     title: 'Diversify Your Portfolio for Better Risk Management',
     content: `In theory, the key to making money in the stock market is having comprehensive knowledge about which stocks to buy and sell at the right time.
-
-
 Therefore, it is wise to limit each stock in your portfolio to a maximum of 2% of your total investment. For example, if you have $10,000, you should allocate only $200 to any single stock.`,
   },
   {
@@ -18,6 +18,7 @@ Therefore, it is wise to limit each stock in your portfolio to a maximum of 2% o
 Additionally, stocks planned for a few weeks might also be held longer if it helps to reduce losses or maximize profits.
 
 For example, if you buy a 'swing' stock with a high momentum probability, expecting its price to rise after an earnings call, but if the stock price drops significantly instead, then our AI system can analyze the latest earnings call news to predict the stock's price future trend. Based on this analysis, you can decide whether to buy more after the drop or sell after a rebound, particularly when the stock market is on an uptrend.`,
+    image: tip2,
   },
   {
     title: 'Follow our notifications promptly and precisely in time.',
@@ -25,6 +26,7 @@ For example, if you buy a 'swing' stock with a high momentum probability, expect
 When the market is down, minimize cutting losses and focus on buying as much stock as possible. However, when the market is recovering, it may be more appropriate to sell some of your holdings. Conversely, when the market is up, avoid buying stocks and instead focus on selling as much stock as possible.
 
 Additionally, our machine learning system identifies stocks that are most likely to increase in price over a given period. While we can't guarantee certainty, we concentrate on selecting stocks with a higher probability of trending upward. This approach, in theory, increases the chances of your portfolio gaining value rather than losing it.`,
+    image: tip3,
   },
   {
     title:
@@ -34,6 +36,7 @@ Additionally, our machine learning system identifies stocks that are most likely
 In many cases, a stock's price might drop significantly despite a positive financial report. Our AI system can analyze these situations and predict whether the stock price may increase after a significant drop, therefore create an opportunity for you to win money by buying more stocks when it drop to recover your losses.
 
 For example, if stock ABCD announces positive financial performance during an earnings call and our AI forecasts that the stock price will increase, you can either hold the stock and wait for it to rebound or buy more if the stock price has significantly dropped.`,
+    image: tip4,
   },
 ]
 
@@ -45,6 +48,7 @@ export const strategies = [
 If you choose to trade these stocks, we recommend buying it at the beginning of the day, and these stocks has a stable positive return after a few days of the earning calls announcement.
 
 Our AI can assist in analyzing whether the stock price is going to go up or down for the day.`,
+    image: strategy1,
   },
   {
     title: 'Swing Trader',
@@ -55,6 +59,7 @@ If you choose to trade these stocks, we recommend buying before the earnings cal
 However, be aware that stock prices may significantly decrease even after positive earnings announcements, therefore, we recommends you to put a put option before the announcement eventhough
 we monly recommends the stock that have intrinsic value according to their pre-quarterly earning calls financial report.
 So our AI can assist in analyzing the after earning call's news to predict whether the stock price is likely to trend up or down after the falls.`,
+    image: strategy2,
   },
   {
     title: 'Position Trader',
@@ -64,5 +69,6 @@ if you choose to trade these stocks, we recommend buying it at anytime you want 
 The earning calls announcement do not have a quite significant effect on these kind of stocks.
 
 Our AI can help you find these kinds of stocks that has positive stable return and an undervalued bullish stocks since the past of one year for you.`,
+    image: strategy3,
   },
 ]

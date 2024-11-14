@@ -10,7 +10,7 @@ const poppins = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'IM-AMM',
+  title: 'IM-AAM',
   description: Moto,
 }
 

@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 import style from '../auth.module.css'
+import { setToken } from '@/api/apiConfig'
 
 export default function Login() {
   const navigate = useRouter()
@@ -24,10 +25,11 @@ export default function Login() {
   }
 
   const onLogin = () => {
-    navigate.replace('/portfolio/position-trader')
     if (remember) {
       console.log(user)
     }
+    setToken('test')
+    navigate.replace('/portfolio/position-trader')
   }
 
   return (

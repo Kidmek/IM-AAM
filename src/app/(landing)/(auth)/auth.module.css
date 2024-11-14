@@ -3,6 +3,10 @@
   background: white;
 }
 
+.formContainer span {
+  color: red;
+}
+
 .formContainer {
   display: flex;
   flex-direction: column;

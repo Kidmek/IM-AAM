@@ -1,88 +1,78 @@
 .tipsContainer {
   display: flex;
   flex-direction: column;
-  padding-top: 65px;
+  padding-block: 56px;
   padding-inline: 65px;
-  padding-bottom: 417px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 24px;
+  /* letter-spacing: 1px; */
+  text-align: left;
 }
 .tipHeader {
   display: flex;
-  gap: 4rem;
-  width: 100%;
+  gap: 10px;
+  margin-bottom: 76px;
+}
+.tipHeader > img {
+  width: 328px;
+  height: auto;
 }
 
-.tipHeader > p {
-  font-size: 20px;
-  font-weight: 200;
-  line-height: 40px;
-  letter-spacing: 0.05em;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  white-space: pre-line;
-  flex: 1;
+.tipTitle {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 28px;
+  border-bottom: 1px solid var(--green);
+  width: fit-content;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
 }
 
-.tipHeader > div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.tipHeader > div > img {
-  width: 534px;
-  height: 383px;
-  border-radius: 9px;
-
-  align-self: flex-end;
-}
 .title {
   font-size: 48px;
   font-weight: 700;
-  line-height: 65px;
-  text-align: center;
-  color: var(--green);
-  margin-block: 7rem;
+  background-color: var(--green);
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 28px;
+  padding-inline: 6px;
+  padding-block: 10px;
+  margin-bottom: 30px;
 }
 
 .tipList {
   display: flex;
-  flex-wrap: wrap;
-  gap: 42px;
-  column-gap: 90px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 53px;
 }
 
-.tipList.strategy {
-  column-gap: 77px;
+.tipBlock {
+  margin-bottom: 171px;
 }
 
 .singleTipItem {
   display: flex;
+  gap: 24px;
+}
+.singleTipItem.reversed {
+  flex-direction: row-reverse;
+}
+
+.singleTipItem > div {
+  display: flex;
   flex-direction: column;
-  width: 45%;
-  align-items: center;
-  gap: 30px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 26px 47px;
+  gap: 7px;
 }
-
-.singleTipItem.strategy {
-  width: calc((100% - 155px) / 3);
-  padding-inline: 20px;
-}
-
-.singleTipItem.strategy > .content {
-  text-align: center;
-}
-
-.singleTipItem > .header {
-  font-size: 20px;
+.header {
+  font-size: 17px;
   font-weight: 700;
   line-height: 26px;
-  text-align: center;
-
-  color: var(--green);
 }
 
 .singleTipItem > .content {
@@ -94,7 +84,8 @@
 }
 
 .singleTipItem > .tipImg {
-  width: 100%;
+  width: auto;
+  max-height: 170px;
 }
 
 .tipChart {
@@ -103,29 +94,85 @@
   margin-inline: auto;
 }
 
+.chart {
+  border-left: 1px solid var(--green);
+  border-bottom: 1px solid var(--green);
+  width: fit-content;
+  padding-right: 20%;
+  padding-top: 20%;
+  margin-top: 20px;
+}
+
+.chart > div {
+  border-radius: 50%;
+  width: 98px;
+  height: 98px;
+  background: rgba(186, 217, 180, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.chart div:nth-of-type(3) {
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.chart div:nth-of-type(2) {
+  margin-left: 193px;
+}
+.chart div:nth-of-type(1) {
+  margin-left: 340px;
+}
+
 @media screen and (max-width: 1200px) {
   .tipsContainer {
     display: flex;
     flex-direction: column;
-    padding-top: 74px;
+    padding-top: 17px;
     padding-inline: 24px;
-    padding-bottom: 165px;
   }
   .tipHeader {
     flex-direction: column;
   }
-  .tipHeader > div > img {
-    width: 100%;
-    height: auto;
+
+  .singleTipItem > .tipImg {
+    width: auto;
+    max-height: none;
+  }
+  .singleTipItem,
+  .singleTipItem.reversed {
+    flex-direction: column;
   }
 
-  .singleTipItem {
-    width: 100% !important;
+  .tipBlock {
+    margin-bottom: 40px;
   }
 
-  .tipChart {
-    margin: 0;
-    width: 100%;
-    margin-block: 10rem;
+  .chart {
+    border-left: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+    width: fit-content;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-top: 20px;
+  }
+
+  .chart > div {
+    width: 88px;
+    height: 88px;
+  }
+
+  .chart div:nth-of-type(3) {
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+
+  .chart div:nth-of-type(2) {
+    margin-left: 113px;
+  }
+  .chart div:nth-of-type(1) {
+    margin-left: 210px;
   }
 }

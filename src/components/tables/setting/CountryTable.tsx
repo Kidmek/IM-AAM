@@ -1,10 +1,10 @@
 import { Countries } from '@/constants/strings/settings'
 
-import style from './setting.module.css'
+import style from './settingTable.module.css'
 
 export default function CountryTable() {
   return (
-    <div className={`${style.tableContainer} ${style.transparentHeader}`}>
+    <div className={`${style.tableContainer} `}>
       <table>
         <thead>
           <tr>

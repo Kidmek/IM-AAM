@@ -16,6 +16,7 @@ import ArrowUp_SVG from '/public/assets/icons/arrow_up.svg'
 import MenuIcon_SVG from '/public/assets/icons/menu_icon.svg'
 import CloseIcon_SVG from '/public/assets/icons/close_icon.svg'
 import BackIcon_SVG from '/public/assets/icons/back_icon.svg'
+import PreviousIcon_SVG from '/public/assets/icons/previous_icon.svg'
 
 import Apple_SVG from '/public/assets/icons/auth/apple_icon.svg'
 import Google_SVG from '/public/assets/icons/auth/google_icon.svg'
@@ -36,10 +37,8 @@ import AmericanExpress_SVG from '/public/assets/icons/payment/american_express_i
 
 //
 
-import Crypto_SVG from '/public/assets/home/crypto.svg'
-import Stock_SVG from '/public/assets/home/stock.svg'
-import NFT_SVG from '/public/assets/home/nft.svg'
 import WhiteLogo_SVG from '/public/assets/white_logo.svg'
+import Loading_SVG from '/public/assets/icons/loading_icon.svg'
 
 export {
   PieIcon_SVG,
@@ -67,11 +66,8 @@ export {
   Apple_SVG,
   Google_SVG,
   BackIcon_SVG,
+  PreviousIcon_SVG,
   WhiteLogo_SVG,
-  //
-  Crypto_SVG,
-  Stock_SVG,
-  NFT_SVG,
   //
   CreditCard_SVG,
   MasterCard_SVG,
@@ -79,4 +75,5 @@ export {
   Paypal_SVG,
   Visa_SVG,
   AmericanExpress_SVG,
+  Loading_SVG,
 }

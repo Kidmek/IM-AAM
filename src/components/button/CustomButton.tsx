@@ -1,3 +1,4 @@
+import { Loading_SVG } from '@/constants/icons'
 import { CSSProperties, FC, SVGProps } from 'react'
 
 interface Props {
@@ -8,6 +9,7 @@ interface Props {
   customContainerStyles?: React.CSSProperties
   variant?: 'bold' | 'slim'
   Icon?: FC<SVGProps<SVGSVGElement>>
+  loading?: boolean
 }
 
 export default function CustomButton({
@@ -18,6 +20,7 @@ export default function CustomButton({
   customContainerStyles,
   variant,
   Icon,
+  loading,
 }: Props) {
   const boldText: CSSProperties = {
     fontFamily: 'Poppins',
@@ -53,11 +56,18 @@ export default function CustomButton({
           : variant === 'slim'
           ? slim
           : undefined),
+        opacity: loading ? '0.5' : undefined,
       }}
       type='button'
     >
-      {Icon && <Icon />}
-      {label}
+      {loading ? (
+        <Loading_SVG style={{ color: 'white' }} />
+      ) : (
+        <>
+          {Icon && <Icon />}
+          {label}
+        </>
+      )}
     </button>
   )
 }
