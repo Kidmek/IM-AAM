@@ -63,6 +63,11 @@
 .headerCell > .headerTitle {
   width: 100%;
 }
+.headerCell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .headerIcons {
   display: flex;
@@ -104,12 +109,6 @@
   --size: 16px;
   position: absolute;
   top: calc((-1 * var(--size) + 1.5px));
-}
-
-.headerCell {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .btn {
@@ -203,8 +202,16 @@
     padding-inline: 24px;
   }
 
+  .headerCell {
+    position: relative;
+  }
+
+  .headerIcons {
+    position: static;
+  }
+
   .tooltiptext {
-    width: 90vw;
-    right: -50vw;
+    width: 80vw;
+    left: 0;
   }
 }

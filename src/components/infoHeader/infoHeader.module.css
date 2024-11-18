@@ -36,6 +36,7 @@
   line-height: 21px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   white-space: pre-line;
+  text-align: center;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -43,14 +44,19 @@
   display: block;
 }
 
-.tooltipTitle {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0;
-  display: block;
-}
-
-.topMargin {
-  margin-top: 2rem !important;
+@media screen and (max-width: 720px) {
+  .header {
+    justify-content: center;
+  }
+  .contentTitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    position: absolute;
+    width: 80vw;
+    padding: 20px 25px;
+    right: 0;
+  }
 }

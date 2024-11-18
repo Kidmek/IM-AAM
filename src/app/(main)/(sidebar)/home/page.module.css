@@ -36,9 +36,28 @@
 @media screen and (max-width: 750px) {
   .homeContainer {
     padding-inline: 24px;
+    padding-block: 44px;
+    font-size: 16px;
+    line-height: 40px;
+    gap: 63px;
+  }
+
+  .title {
+    font-size: 20px;
   }
 
   .singleRow {
     flex-direction: column;
+  }
+
+  .singleRow.reversed {
+    flex-direction: column-reverse;
+  }
+
+  .singleRow img {
+    width: 90vw;
+  }
+  p.title {
+    font-size: 24px;
   }
 }

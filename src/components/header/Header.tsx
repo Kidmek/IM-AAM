@@ -14,14 +14,36 @@ import {
 import style from './header.module.css'
 
 import { usePathname } from 'next/navigation'
+import MobileMenu from './MobileMenu'
 interface Props {
   toggleNav?: () => void
   navOpen?: boolean
   noSideBar: boolean
+  notificationCount?: number
 }
-export default function Header({ toggleNav, navOpen, noSideBar }: Props) {
+export default function Header({
+  toggleNav,
+  navOpen,
+  noSideBar,
+  notificationCount,
+}: Props) {
   const path = usePathname()
 
+  const renderNotification = () => {
+    if (notificationCount && notificationCount > 0) {
+      return (
+        <Link href={'/notification'} className={style.notificationBtnContainer}>
+          <NotificationIcon_SVG className={style.notificationIcon} />
+          <div className={style.notificationCount}>{notificationCount}</div>
+        </Link>
+      )
+    }
+    return (
+      <Link href={'/notification'} className={style.notificationBtnContainer}>
+        <NoNotificationIcon_SVG className={style.notificationIcon} />
+      </Link>
+    )
+  }
   return (
     <div className={`${style.headerContainer} ${noSideBar && style.noSideBar}`}>
       {noSideBar ? (
@@ -70,13 +92,7 @@ export default function Header({ toggleNav, navOpen, noSideBar }: Props) {
 
         {!noSideBar ? (
           <>
-            <Link
-              href={'/notification'}
-              className={style.notificationBtnContainer}
-            >
-              <NotificationIcon_SVG className={style.notificationIcon} />
-              <div className={style.notificationCount}>1</div>
-            </Link>
+            {renderNotification()}
             <Link href={'/profile'}>
               <img
                 src={profile}
@@ -89,8 +105,18 @@ export default function Header({ toggleNav, navOpen, noSideBar }: Props) {
           <div></div>
         )}
         <div className={style.menuIconContainer}>
-          <MenuIcon_SVG />
-          <NoNotificationIcon_SVG />
+          <div
+            style={{
+              display: 'flex',
+            }}
+            className={style.menuIcon}
+          >
+            <MenuIcon_SVG />
+            <div className={style.mobileNavContainer}>
+              <MobileMenu path={path} />
+            </div>
+          </div>
+          {renderNotification()}
         </div>
       </div>
       {noSideBar && <div className={style.emptyDiv}></div>}

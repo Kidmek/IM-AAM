@@ -3,6 +3,7 @@ import {
   ADMIN,
   API,
   LOGIN_API,
+  REFRESH_TOKEN_KEY,
   REGISTER_API,
   ROLE_KEY,
   TOKEN_KEY,
@@ -83,16 +84,13 @@ export const apiSkeleton = ({
       }
       if (onSuccess && response.data) {
         if (url === LOGIN_API) {
-          if (!response.data?.accessToken) {
-            // toast.error('Unable to login')
+          if (!response.data?.access && onError) {
+            onError('Unable to login')
             return
           }
         }
         onSuccess(response.data)
       }
-      //   if (successMsg && onError) {
-      //     toast.success(successMsg)
-      //   }
     })
     .catch((err) => {
       console.log('Error At : ', API + url)
@@ -125,9 +123,10 @@ export const apiSkeleton = ({
     })
 }
 
-export const setToken = (token: string) => {
+export const setToken = (token: string, refresh: string) => {
   if (typeof window !== undefined) {
     localStorage.setItem(TOKEN_KEY, token)
+    localStorage.setItem(REFRESH_TOKEN_KEY, refresh)
   }
 }
 

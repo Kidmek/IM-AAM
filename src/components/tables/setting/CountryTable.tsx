@@ -38,6 +38,9 @@ export default function CountryTable() {
             </th>
           </tr>
         </thead>
+        <tbody className={style.emptyRow}>
+          <tr></tr>
+        </tbody>
         <tbody>
           {Countries.map((c, index) => {
             return (

@@ -21,18 +21,7 @@ export default function InfoHeader({ title, info }: Props) {
         <InfoIcon_SVG className={style.infoIcon} />
         <div className={style.tooltiptext}>
           {info.map((t, index) => {
-            return (
-              <div key={index}>
-                <span
-                  className={`${style.tooltipTitle} ${
-                    index > 0 ? style.topMargin : ''
-                  }`}
-                >
-                  {t.title}
-                </span>
-                {t.tip}
-              </div>
-            )
+            return <div key={index}>{t.tip}</div>
           })}
         </div>
       </div>

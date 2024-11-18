@@ -17,6 +17,20 @@
 
 .tableContainer > table {
   width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer tbody {
+  background-color: white;
+}
+
+.emptyRow {
+  background-color: transparent !important;
+  height: 10px;
+}
+
+.emptyRow td {
+  max-height: 1px;
 }
 /* Recommended */
 
@@ -60,9 +74,6 @@
 
 .tableContainer td > div {
   justify-content: center;
-}
-.tableContainer thead > tr {
-  margin-bottom: 1rem;
 }
 
 .headerCell div {

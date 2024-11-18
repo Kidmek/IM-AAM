@@ -86,9 +86,7 @@
 .notificationBtnContainer {
   cursor: pointer;
   position: relative;
-
-  width: 24px;
-  height: 24px;
+  display: flex;
 }
 
 .notificationIcon {
@@ -136,7 +134,8 @@
   text-align: center;
 }
 
-.emailHeaderWrapper > img {
+.emailHeaderWrapper a,
+.emailHeaderWrapper img {
   height: 100%;
 }
 
@@ -166,7 +165,21 @@
     color: black;
     align-items: center;
     gap: 20px;
+    position: relative;
   }
+
+  .mobileNavContainer {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .menuIcon:hover .mobileNavContainer {
+    display: block;
+    top: 30px;
+    right: 50%;
+  }
+
   .headerLogo.white {
     display: block;
     z-index: 100;

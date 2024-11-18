@@ -44,3 +44,38 @@ export const NavElements = [
     icon: LogoutIcon_SVG,
   },
 ]
+
+export const mobileMenus = [
+  {
+    name: 'Home',
+    path: '/home',
+  },
+  {
+    name: 'Portfolio Management',
+    path: '/portfolio',
+  },
+  {
+    name: 'Position Trader',
+    path: '/portfolio/position-trader',
+  },
+  {
+    name: 'Swing Trader',
+    path: '/portfolio/swing-trader',
+  },
+  {
+    name: 'Daily Trader',
+    path: '/portfolio/daily-trader',
+  },
+  {
+    name: 'Settings',
+    path: '/settings',
+  },
+  {
+    name: 'Profile',
+    path: '/profile',
+  },
+  {
+    name: 'Logout',
+    path: '/registration',
+  },
+]

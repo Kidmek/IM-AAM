@@ -43,6 +43,7 @@ export default function SideBarLayout({
           toggleNav={() => setNavOpen(!navOpen)}
           navOpen={navOpen}
           noSideBar={noSideBar}
+          notificationCount={0}
         />
         <div className={style.pageContent}>{children}</div>
         <Footer />

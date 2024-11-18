@@ -29,4 +29,25 @@
   .inner {
     padding: 24px;
   }
+
+  .settingsContainer {
+    padding-inline: 0px;
+    padding-top: 24px;
+  }
+
+  .settingsContainer > p {
+    text-align: center;
+  }
+
+  .settingsContainer > div {
+    padding-inline: 10px;
+  }
+
+  .settingsContainer th {
+    width: auto !important;
+  }
+
+  .settingsContainer td {
+    white-space: wrap !important;
+  }
 }

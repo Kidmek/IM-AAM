@@ -11,7 +11,7 @@ import Dialog from '@/components/dialog/Dialog'
 import WarningPopup from '@/components/popUp/WarningPopup'
 import { UserType, validateUser } from '@/constants/validation'
 import { apiSkeleton, setToken } from '@/api/apiConfig'
-import { REGISTER_API } from '@/constants/strings/api'
+import { REGISTER_API, TEST } from '@/constants/strings/api'
 
 const initialUserState: UserType = Object.freeze({
   fullName: '',
@@ -43,17 +43,16 @@ export default function Registration() {
     if (!agree) {
       setPopUpShown(false)
     } else {
-      setToken('test')
-      navigate.push('/home')
-      return
+      if (TEST) {
+        setToken('test', 'test')
+        navigate.push('/home')
+        return
+      }
       const newUserErr = { ...initialUserState }
       const valid = validateUser(user, newUserErr)
       setUserErr(newUserErr)
 
       if (valid) {
-        setToken('test')
-        navigate.push('/home')
-        return
         const {
           email,
           password,
@@ -76,8 +75,7 @@ export default function Registration() {
           setLoading,
           onSuccess(data) {
             console.log('Response', data)
-            setToken('test')
-            navigate.push('/home')
+            navigate.push('/login')
           },
           onError(error) {
             if (error && error?.length < 100) {

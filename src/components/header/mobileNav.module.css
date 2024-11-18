@@ -1,0 +1,15 @@
+.container {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: smaller;
+  width: max-content;
+  text-align: center;
+  gap: 10px;
+}
+
+.selected {
+  color: var(--green);
+}
