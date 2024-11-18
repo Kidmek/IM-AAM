@@ -2,8 +2,12 @@
   padding-block: 20px;
 }
 
-.tableContainer {
+.tableContainer > div {
   overflow-x: auto;
+}
+
+.tableContainer > div > table {
+  table-layout: auto;
 }
 
 .tableContainer > p {
@@ -67,7 +71,7 @@
 }
 
 .tooltiptext {
-  visibility: hidden;
+  display: none;
   position: absolute;
   background-color: white;
   padding: 20px 25px;
@@ -84,7 +88,7 @@
 }
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+  display: block;
 }
 
 .filterIcon,

@@ -4,6 +4,7 @@ import PortfolioTable from '@/components/tables/porfolio/PorfolioTable'
 import { useState } from 'react'
 import Tabs from '@/components/contentHeader/Tabs'
 import Settings from '@/components/settings/Settings'
+import MobileTables from '@/components/tables/porfolio/MobileTables'
 
 export default function SwingTrader() {
   const [tab, setTab] = useState(0)
@@ -17,7 +18,14 @@ export default function SwingTrader() {
       />
 
       {tab === 0 ? (
-        <PortfolioTable title='Position Trader' />
+        <div>
+          <div className={'singleTable'}>
+            <PortfolioTable title='Swing Trader' />
+          </div>
+          <div className={'mobileTables'}>
+            <MobileTables />
+          </div>
+        </div>
       ) : (
         <Settings inner />
       )}

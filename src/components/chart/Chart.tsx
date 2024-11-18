@@ -87,8 +87,11 @@ export default function Chart() {
   return (
     <div>
       <Line
+        style={{}}
         data={data}
         options={{
+          maintainAspectRatio: false, // Disable aspect ratio
+          responsive: true, // Enable responsiveness
           scales: {
             y: {
               min: MIN,

@@ -158,3 +158,21 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.mobileTables {
+  display: none;
+}
+
+.singleTable {
+  display: block;
+}
+
+@media screen and (max-width: 720px) {
+  .mobileTables {
+    display: block;
+  }
+
+  .singleTable {
+    display: none;
+  }
+}

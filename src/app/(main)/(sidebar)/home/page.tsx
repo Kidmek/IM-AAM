@@ -3,7 +3,7 @@
 import { Home1, Home2, Home3, Home4 } from '@/constants/images'
 
 import style from './page.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Dialog from '@/components/dialog/Dialog'
 import GuestPopup from '@/components/popUp/GuestPopup'
 import AttentionPopup from '@/components/popUp/AttentionPopup'
@@ -12,6 +12,9 @@ import WelcomePopup from '@/components/popUp/WelcomePopup'
 
 export default function Home() {
   const [popUpShown, setPopUpShown] = useState<1 | 2 | null>(1)
+  const [isAuthenticated, setIsAuthenticated] = useState<undefined | boolean>(
+    undefined
+  )
 
   const renderHomeRow = (content: string, image: string, title?: string) => {
     return (
@@ -24,12 +27,17 @@ export default function Home() {
       </div>
     )
   }
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsAuthenticated(!!getToken())
+    }
+  }, [])
   return (
     <div className={style.homeContainer}>
-      {popUpShown && (
+      {popUpShown && isAuthenticated !== undefined && (
         <Dialog
           child={
-            getToken() && popUpShown ? (
+            isAuthenticated ? (
               popUpShown == 1 ? (
                 <WelcomePopup />
               ) : (

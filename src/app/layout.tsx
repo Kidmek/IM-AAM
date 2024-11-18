@@ -23,6 +23,10 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <link rel='icon' href='/logo.png' type='image/png' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+        />
       </head>
       <body className={`${poppins.variable}`}>{children}</body>
     </html>

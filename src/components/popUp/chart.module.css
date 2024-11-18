@@ -80,11 +80,15 @@
 }
 
 .chart {
-  margin-block: 50px;
+  margin-top: 23px;
+  margin-bottom: 77px;
 }
 
+.chart > div {
+  height: 306px;
+}
 .container {
-  padding-block: 20px;
+  width: 982px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -95,6 +99,7 @@
   }
   .container {
     padding-inline: 5px;
+    width: fit-content;
   }
 
   .footer {
@@ -113,5 +118,9 @@
     height: 1px;
     margin-inline: 0px;
     margin-block: 5px;
+  }
+
+  .chart > div {
+    height: 190px;
   }
 }

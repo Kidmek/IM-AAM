@@ -9,7 +9,6 @@ export const Weekly = {
         endDate: '10/01/2024',
       },
     },
-    {},
   ],
   stock: [
     {

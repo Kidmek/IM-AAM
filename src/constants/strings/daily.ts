@@ -32,6 +32,11 @@ export const dailyHeaders = [
     filter_disabled: true,
   },
   {
+    name: 'Market Opening Price',
+    color: '--gray',
+    value: '$ 242.00',
+  },
+  {
     name: 'Current Price',
     color: '--gray',
     value: '$ 242.00',
@@ -48,26 +53,53 @@ export const dailyHeaders = [
     value: '8.254%',
   },
   {
-    name: 'Target Holding Period',
+    name: 'Estimated Daily Lowest Change%',
     color: '--light-green',
-    value: '5 days',
-    help: true,
+    value: '8.254%',
     tooltip: '',
   },
   {
-    name: 'Target Profit%',
-    color: '--table-green',
-    value: '50%',
+    name: 'Estimated Daily Highest Change%',
+    color: '--light-green',
+    value: '8.254%',
+    tooltip: '',
   },
   {
-    name: 'Target Profit',
-    color: '--table-green',
-    value: '$ 12,000',
+    name: 'Target Daily Profit%',
+    color: '--light-green',
+    value: '8.254%',
+    tooltip: '',
   },
   {
-    name: 'Target Selling Price',
+    name: 'Barkerage Commission',
+    color: '--light-red',
+    value: '7.6',
+  },
+  {
+    name: 'Lot',
+    color: '--light-red',
+    value: '55',
+  },
+  {
+    name: 'Total Cost',
+    color: '--light-red',
+    value: '$ 1,200,000',
+  },
+
+  {
+    name: 'Selling Price Target',
     color: '--table-green',
-    value: '$ 12,000',
+    value: '$ 18.90',
+  },
+  {
+    name: 'Target Current Profit%',
+    color: '--table-green',
+    value: '-2.71%',
+  },
+  {
+    name: 'Total Target Profit',
+    color: '--table-green',
+    value: '$ 0.515',
   },
   {
     name: 'DCF',
@@ -79,32 +111,9 @@ export const dailyHeaders = [
   {
     name: 'Technical Analysis Score',
     color: '--table-light-gray',
-    value: '$ 4,525',
+    value: '4,525',
     help: true,
     tooltip: '',
-  },
-  {
-    name: 'Fundamental Analysis Score',
-    color: '--table-light-gray',
-    value: '$ 8,525',
-    help: true,
-    tooltip: '',
-    filter_disabled: true,
-  },
-  {
-    name: 'Average Long Term Return',
-    color: '--light-red',
-    value: '$ 40,000.00',
-  },
-  {
-    name: 'Average Monthly Historical Return',
-    color: '--light-red',
-    value: '$ 20,000.00',
-  },
-  {
-    name: 'Average 5 Days Return',
-    color: '--light-red',
-    value: '$ 1,200,000',
   },
   {
     name: 'Beta',
@@ -133,9 +142,14 @@ export const dailyHeaders = [
     color: '--table-light-gray',
   },
   {
-    name: "Market's Previous Day Chg%",
+    name: 'Previous Day Chg%',
     color: '--bright-green',
     value: 'N/A',
+  },
+  {
+    name: 'Cost Of Information',
+    value: '$2',
+    help: true,
   },
 ]
 

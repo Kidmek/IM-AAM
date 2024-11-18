@@ -44,7 +44,7 @@ export default function TipAndStrategies() {
       {renderSingle(false)}
 
       <div>
-        <p className={style.header}>Position Trader</p>
+        {/* <p className={style.header}>Position Trader</p> */}
         <div className={style.chart}>
           <div>Position</div>
           <div>Daily Trader</div>

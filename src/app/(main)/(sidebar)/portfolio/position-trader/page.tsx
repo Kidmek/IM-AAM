@@ -6,6 +6,7 @@ import Tabs from '@/components/contentHeader/Tabs'
 import Dialog from '@/components/dialog/Dialog'
 import Settings from '@/components/settings/Settings'
 import InsufficientPopUp from '@/components/popUp/InsufficientPopup'
+import MobileTables from '@/components/tables/porfolio/MobileTables'
 
 export default function PositionTrader() {
   const [tab, setTab] = useState(0)
@@ -26,7 +27,14 @@ export default function PositionTrader() {
       />
 
       {tab === 0 ? (
-        <PortfolioTable title='Position Trader' />
+        <div>
+          <div className={'singleTable'}>
+            <PortfolioTable title='Position Trader' />
+          </div>
+          <div className={'mobileTables'}>
+            <MobileTables />
+          </div>
+        </div>
       ) : (
         <Settings inner />
       )}

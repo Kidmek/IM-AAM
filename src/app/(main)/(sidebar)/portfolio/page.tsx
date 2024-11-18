@@ -6,8 +6,9 @@ import Tabs from '@/components/contentHeader/Tabs'
 import InsufficientPopUp from '@/components/popUp/InsufficientPopup'
 import Dialog from '@/components/dialog/Dialog'
 import Settings from '@/components/settings/Settings'
+import MobileTables from '@/components/tables/porfolio/MobileTables'
 
-export default function PositionTrader() {
+export default function PortfolioManagement() {
   const [tab, setTab] = useState(0)
   const [popUpShown, setPopUpShown] = useState<boolean>(false)
 
@@ -26,7 +27,18 @@ export default function PositionTrader() {
         tabs={['Overview', 'Porfolio Setting']}
       />
 
-      {tab === 0 ? <PortfolioTable title='Recommended' /> : <Settings inner />}
+      {tab === 0 ? (
+        <div>
+          <div className='singleTable'>
+            <PortfolioTable title='Recommended' />
+          </div>
+          <div className='mobileTables'>
+            <MobileTables />
+          </div>
+        </div>
+      ) : (
+        <Settings inner />
+      )}
     </>
   )
 }

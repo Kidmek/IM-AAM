@@ -126,11 +126,15 @@ export const apiSkeleton = ({
 }
 
 export const setToken = (token: string) => {
-  localStorage.setItem(TOKEN_KEY, token)
+  if (typeof window !== undefined) {
+    localStorage.setItem(TOKEN_KEY, token)
+  }
 }
 
 export const getToken = () => {
-  return localStorage.getItem(TOKEN_KEY)
+  if (typeof window !== undefined) {
+    return localStorage.getItem(TOKEN_KEY)
+  }
 }
 
 export const isAdmin = () => {
@@ -138,23 +142,33 @@ export const isAdmin = () => {
 }
 
 export const getLocalUser = () => {
-  const user = localStorage.getItem(USER_KEY)
-  if (!user) return null
-  return JSON.parse(user)
+  if (typeof window !== undefined) {
+    const user = localStorage.getItem(USER_KEY)
+    if (!user) return null
+    return JSON.parse(user)
+  }
 }
 
 export const setLocalUser = (user: any) => {
-  localStorage.setItem(USER_KEY, JSON.stringify(user))
+  if (typeof window !== undefined) {
+    localStorage.setItem(USER_KEY, JSON.stringify(user))
+  }
 }
 
 export const getLocalRole = () => {
-  return localStorage.getItem(ROLE_KEY)
+  if (typeof window !== undefined) {
+    return localStorage.getItem(ROLE_KEY)
+  }
 }
 
 export const setLocalRole = (role: string) => {
-  localStorage.setItem(ROLE_KEY, role)
+  if (typeof window !== undefined) {
+    localStorage.setItem(ROLE_KEY, role)
+  }
 }
 
 export const logout = () => {
-  localStorage.clear()
+  if (typeof window !== undefined) {
+    localStorage.clear()
+  }
 }
