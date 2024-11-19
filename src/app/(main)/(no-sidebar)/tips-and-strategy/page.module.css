@@ -100,7 +100,7 @@
   width: fit-content;
   padding-right: 20%;
   padding-top: 20%;
-  margin-top: 20px;
+  margin: 12px;
 }
 
 .chart > div {
@@ -124,6 +124,20 @@
 }
 .chart div:nth-of-type(1) {
   margin-left: 340px;
+}
+
+.chartContainer > div:first-of-type {
+  display: flex;
+  align-items: flex-end;
+}
+
+.chartContainer > p:nth-of-type(1) {
+  margin-left: -5px;
+  margin-bottom: -10px;
+}
+
+.chartContainer > div > p:nth-of-type(1) {
+  margin-top: -10px;
 }
 
 @media screen and (max-width: 1200px) {

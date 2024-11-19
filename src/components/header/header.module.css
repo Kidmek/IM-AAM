@@ -205,3 +205,21 @@
     line-height: 24px;
   }
 }
+
+@media print {
+  .emailHeader {
+    padding-block: 10px;
+  }
+
+  .emailHeader {
+    padding-block: 20px;
+  }
+
+  .emailHeaderWrapper {
+    height: 100px;
+    gap: 0;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 250px;
+  }
+}

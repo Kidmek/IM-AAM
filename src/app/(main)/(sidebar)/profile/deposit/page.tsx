@@ -2,7 +2,7 @@
 
 import {
   AmericanExpress_SVG,
-  Apple_SVG,
+  ApplePay_SVG,
   CreditCard_SVG,
   InfoIcon_SVG,
   MasterCard_SVG,
@@ -73,7 +73,11 @@ export default function Deposit() {
             className={`${style.circleCheckBox} ${selected && style.selected}`}
           />
 
-          <Icon />
+          <Icon
+            style={{
+              color: 'black',
+            }}
+          />
           {title}
         </div>
         {showCards && renderCards()}
@@ -164,7 +168,7 @@ export default function Deposit() {
         <div>
           {renderPaymentOptions(CreditCard_SVG, 'Credit Card', true)}
           {renderPaymentOptions(Paypal_SVG, 'PayPal')}
-          {renderPaymentOptions(Apple_SVG, 'ApplePay')}
+          {renderPaymentOptions(ApplePay_SVG, 'ApplePay')}
         </div>
 
         <div className={`${style.card} ${style.completePayment}`}>

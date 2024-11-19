@@ -8,6 +8,7 @@ import { useState } from 'react'
 import Dialog from '@/components/dialog/Dialog'
 import ChartPopup from '@/components/popUp/ChartPopup'
 import { Chart } from '@/constants/images'
+import CustomButton from '@/components/button/CustomButton'
 
 export default function DailyTable({ title }: { title: string }) {
   const [popUpShown, setPopUpShown] = useState(true)
@@ -75,9 +76,9 @@ export default function DailyTable({ title }: { title: string }) {
                     <th
                       key={index}
                       style={{
-                        backgroundColor: `var(--green)`,
+                        backgroundColor: `${h.color ?? 'white'}`,
                         minWidth: `${minWidth > 70 ? minWidth : 70}px`,
-                        color: 'white',
+                        color: `${h.textColor ?? 'black'}`,
                       }}
                     >
                       <div className={style.headerCell}>
@@ -89,6 +90,9 @@ export default function DailyTable({ title }: { title: string }) {
                                 className={`${style.helpIcon} ${
                                   hasBoth && style.absolute
                                 }`}
+                                style={{
+                                  color: `${h.textColor ?? 'black'}`,
+                                }}
                               />
                               {h.tooltip && h.tooltip.length > 0 && (
                                 <div className={style.tooltiptext}>
@@ -98,7 +102,12 @@ export default function DailyTable({ title }: { title: string }) {
                             </div>
                           )}
                           {!h.filter_disabled ? (
-                            <FilterIcon_SVG className={style.filterIcon} />
+                            <FilterIcon_SVG
+                              className={style.filterIcon}
+                              style={{
+                                color: `${h.textColor ?? 'black'}`,
+                              }}
+                            />
                           ) : (
                             <div className={style.filterIcon} />
                           )}
@@ -137,6 +146,7 @@ export default function DailyTable({ title }: { title: string }) {
                                   }}
                                   onClick={() => setPopUpShown(false)}
                                 />
+                                <CustomButton label='Add' />
                                 {h.value}
                               </div>
                             </td>

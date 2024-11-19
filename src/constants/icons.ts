@@ -19,6 +19,7 @@ import BackIcon_SVG from '/public/assets/icons/back_icon.svg'
 import PreviousIcon_SVG from '/public/assets/icons/previous_icon.svg'
 
 import Apple_SVG from '/public/assets/icons/auth/apple_icon.svg'
+
 import Google_SVG from '/public/assets/icons/auth/google_icon.svg'
 
 import Facebook_SVG from '/public/assets/icons/socials/facebook.svg'
@@ -34,6 +35,7 @@ import Paypal_SVG from '/public/assets/icons/payment/paypal_icon.svg'
 import Visa_SVG from '/public/assets/icons/payment/visa_icon.svg'
 import MasterCard_SVG from '/public/assets/icons/payment/master_card_icon.svg'
 import AmericanExpress_SVG from '/public/assets/icons/payment/american_express_icon.svg'
+import ApplePay_SVG from '/public/assets/icons/payment/apple_icon.svg'
 
 //
 
@@ -76,4 +78,5 @@ export {
   Visa_SVG,
   AmericanExpress_SVG,
   Loading_SVG,
+  ApplePay_SVG,
 }

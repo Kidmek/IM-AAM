@@ -85,16 +85,49 @@
   color: rgba(102, 102, 102, 1);
 }
 
+.printBtn {
+  width: fit-content !important;
+  align-self: flex-end !important;
+}
+
+.header,
+.footer {
+  background-color: var(--bg-green);
+  display: none;
+}
+
 @media screen and (max-width: 1000px) {
   .container {
-    width: 80%;
+    width: 95% !important;
     min-width: auto;
   }
 }
 
 @media screen and (max-width: 550px) {
+  .printBtn {
+    width: 100% !important;
+  }
+}
+
+@page {
+  size: A4 portrait; /* Sets the default size to A4 and orientation to portrait */
+}
+
+@media print {
+  .printBtn {
+    display: none;
+  }
+
   .container {
-    width: 99%;
-    min-width: auto;
+    width: 100%;
+    height: auto;
+    overflow: visible; /* Ensure no content is cut off */
+    padding-block: 0px;
+    padding-top: 18px;
+  }
+
+  .printWrapper {
+    padding-inline: 20px !important;
+    /* page-break-inside: avoid; */
   }
 }

@@ -10,6 +10,7 @@ interface Props {
   variant?: 'bold' | 'slim'
   Icon?: FC<SVGProps<SVGSVGElement>>
   loading?: boolean
+  className?: string
 }
 
 export default function CustomButton({
@@ -21,6 +22,7 @@ export default function CustomButton({
   variant,
   Icon,
   loading,
+  className,
 }: Props) {
   const boldText: CSSProperties = {
     fontFamily: 'Poppins',
@@ -36,6 +38,7 @@ export default function CustomButton({
   }
   return (
     <button
+      className={className}
       onClick={onClick}
       style={{
         backgroundColor: bgColor ?? 'var(--green)',

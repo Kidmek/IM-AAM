@@ -5,6 +5,7 @@
   padding-inline: 42px;
   max-width: 100vw;
   align-items: center;
+  overflow-y: hidden;
 }
 
 .footerLogoContainer {
@@ -151,5 +152,11 @@
 @media screen and (max-width: 390px) {
   .footerContainer * {
     font-size: 3.5vw !important;
+  }
+}
+
+@media print {
+  .emailFooter {
+    display: none;
   }
 }
