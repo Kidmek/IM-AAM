@@ -37,24 +37,23 @@ export default function TipAndStrategies() {
     <div className={style.tipsContainer}>
       <div className={style.tipHeader}>
         <p>{tipsHeader}</p>
-        <img src={tipsHeaderImg} alt='Tip Header' />
+        <img src={tipsHeaderImg} alt="Tip Header" />
       </div>
       <div className={style.tipTitle}>Tips & Strategies</div>
       {renderSingle(true)}
       {renderSingle(false)}
 
       <div className={style.chartContainer}>
-        <p>High</p>
+        <p>Expected Return</p>
         <div>
           <div className={style.chart}>
             <div>Position</div>
             <div>Daily Trader</div>
             <div>Swing Trader</div>
           </div>
-          <p>High</p>
+          <p>Risk</p>
         </div>
-        <p>Low</p>
       </div>
     </div>
-  )
+  );
 }

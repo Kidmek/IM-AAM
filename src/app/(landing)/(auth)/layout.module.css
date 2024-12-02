@@ -34,6 +34,7 @@
 @media screen and (max-width: 1150px) {
   .authContainer {
     flex-direction: column;
+    height: 100vh;
   }
 
   .logoContainer {

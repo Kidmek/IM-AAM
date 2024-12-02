@@ -1,4 +1,6 @@
-import { FC, SVGProps } from 'react'
+'use client'
+
+import { FC, SVGProps, useEffect, useState } from 'react'
 import { Logo } from '../../constants/images'
 import style from './nav.module.css'
 import { usePathname } from 'next/navigation'
@@ -9,6 +11,11 @@ import { logout } from '@/api/apiConfig'
 
 export default function Nav({ navOpen }: { navOpen: boolean }) {
   const pathname = usePathname()
+  const [subMenuOpened, setSubMenuOpened] = useState(false)
+
+  useEffect(() => {
+    setSubMenuOpened(pathname.startsWith('/portfolio'))
+  }, [pathname])
 
   const renderSingleNav = (nav: {
     name: string
@@ -25,35 +32,51 @@ export default function Nav({ navOpen }: { navOpen: boolean }) {
 
     return (
       <div className={style.singleNavContainer} key={path}>
-        <Link
-          className={`${style.singleNav} ${found && style.selected} ${
-            !navOpen && style.closed
-          }`}
-          href={path}
-          onClick={() => {
-            if (text === 'Logout') {
-              logout()
-            }
-          }}
-        >
-          <Icon className={style.navIcon} />
-          {navOpen && text}
-        </Link>
-        {navOpen &&
-          found &&
-          navSubElements?.map((s) => {
-            return (
-              <Link
-                key={text + s.path}
-                className={`${style.subNav} ${
-                  s.path === pathname && style.selectedSub
-                }`}
-                href={s.path}
-              >
-                {s.name}
-              </Link>
-            )
-          })}
+        {!navSubElements?.length ? (
+          <Link
+            className={`${style.singleNav} ${found && style.selected} ${
+              !navOpen && style.closed
+            }`}
+            href={path}
+            onClick={() => {
+              if (text === 'Logout') {
+                logout()
+              }
+            }}
+          >
+            <Icon className={style.navIcon} />
+            {navOpen && text}
+          </Link>
+        ) : (
+          <>
+            <div
+              className={`${style.singleNav} ${found && style.selected} ${
+                !navOpen && style.closed
+              }`}
+              onClick={() => {
+                setSubMenuOpened(!subMenuOpened)
+              }}
+            >
+              <Icon className={style.navIcon} />
+              {navOpen && text}
+            </div>
+            {navOpen &&
+              subMenuOpened &&
+              navSubElements?.map((s) => {
+                return (
+                  <Link
+                    key={text + s.path}
+                    className={`${style.subNav} ${
+                      s.path === pathname && style.selectedSub
+                    }`}
+                    href={s.path}
+                  >
+                    {s.name}
+                  </Link>
+                )
+              })}
+          </>
+        )}
       </div>
     )
   }

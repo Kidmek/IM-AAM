@@ -6,6 +6,7 @@ import { Chart } from '@/constants/images'
 import { useState } from 'react'
 import ChartPopup from '@/components/popUp/ChartPopup'
 import Dialog from '@/components/dialog/Dialog'
+import CustomButton from '@/components/button/CustomButton'
 
 export default function PortfolioTable({ title }: { title: string }) {
   const [popUpShown, setPopUpShown] = useState(true)
@@ -61,40 +62,51 @@ export default function PortfolioTable({ title }: { title: string }) {
               <tr>
                 {positionHeaders.map((h, index) => {
                   const minWidth =
-                    h.name.length * 6 + h.name.split(' ').length * 5
+                    h.name.length * 6 + h.name.split(' ').length * 6
                   const hasBoth = h.help && !h.filter_disabled
+                  const textColor = h.textColor ?? 'rgba(23, 23, 23, 1)'
                   return (
                     <th
                       key={index}
                       style={{
-                        backgroundColor: `var(--green)`,
+                        backgroundColor: `${h.color ?? 'white'}`,
                         minWidth: `${minWidth > 70 ? minWidth : 70}px`,
-                        color: 'white',
+                        color: textColor,
                       }}
                     >
                       <div className={style.headerCell}>
                         <div className={style.headerTitle}>{h.name}</div>
-                        <div className={style.headerIcons}>
-                          {h.help && (
-                            <div className={style.tooltip}>
-                              <HelpIcon_SVG
-                                className={`${style.helpIcon} ${
-                                  hasBoth && style.absolute
-                                }`}
+                        {(h.help || !h.filter_disabled) && (
+                          <div className={style.headerIcons}>
+                            {h.help && (
+                              <div className={style.tooltip}>
+                                <HelpIcon_SVG
+                                  className={`${style.helpIcon} ${
+                                    hasBoth && style.absolute
+                                  }`}
+                                  style={{
+                                    color: textColor,
+                                  }}
+                                />
+                                {h.tooltip && h.tooltip.length > 0 && (
+                                  <div className={style.tooltiptext}>
+                                    <div key={index}>{h.tooltip}</div>
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                            {!h.filter_disabled ? (
+                              <FilterIcon_SVG
+                                className={style.filterIcon}
+                                style={{
+                                  color: textColor,
+                                }}
                               />
-                              {h.tooltip && h.tooltip.length > 0 && (
-                                <div className={style.tooltiptext}>
-                                  <div key={index}>{h.tooltip}</div>
-                                </div>
-                              )}
-                            </div>
-                          )}
-                          {!h.filter_disabled ? (
-                            <FilterIcon_SVG className={style.filterIcon} />
-                          ) : (
-                            <div className={style.filterIcon} />
-                          )}
-                        </div>
+                            ) : (
+                              <div className={style.filterIcon} />
+                            )}
+                          </div>
+                        )}
                       </div>
                     </th>
                   )
@@ -133,6 +145,8 @@ export default function PortfolioTable({ title }: { title: string }) {
                                 }}
                                 onClick={() => setPopUpShown(false)}
                               />
+                              <CustomButton label='Add' />
+
                               {h.value}
                             </div>
                           </td>

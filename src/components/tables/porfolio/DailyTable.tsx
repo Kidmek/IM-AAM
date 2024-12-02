@@ -72,46 +72,50 @@ export default function DailyTable({ title }: { title: string }) {
                   const minWidth =
                     h.name.length * 6 + h.name.split(' ').length * 5
                   const hasBoth = h.help && !h.filter_disabled
+                  const textColor = h.textColor ?? 'rgba(23, 23, 23, 1)'
+
                   return (
                     <th
                       key={index}
                       style={{
                         backgroundColor: `${h.color ?? 'white'}`,
                         minWidth: `${minWidth > 70 ? minWidth : 70}px`,
-                        color: `${h.textColor ?? 'black'}`,
+                        color: textColor,
                       }}
                     >
                       <div className={style.headerCell}>
                         <div className={style.headerTitle}>{h.name}</div>
-                        <div className={style.headerIcons}>
-                          {h.help && (
-                            <div className={style.tooltip}>
-                              <HelpIcon_SVG
-                                className={`${style.helpIcon} ${
-                                  hasBoth && style.absolute
-                                }`}
+                        {(h.help || !h.filter_disabled) && (
+                          <div className={style.headerIcons}>
+                            {h.help && (
+                              <div className={style.tooltip}>
+                                <HelpIcon_SVG
+                                  className={`${style.helpIcon} ${
+                                    hasBoth && style.absolute
+                                  }`}
+                                  style={{
+                                    color: textColor,
+                                  }}
+                                />
+                                {h.tooltip && h.tooltip.length > 0 && (
+                                  <div className={style.tooltiptext}>
+                                    <div key={index}>{h.tooltip}</div>
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                            {!h.filter_disabled ? (
+                              <FilterIcon_SVG
+                                className={style.filterIcon}
                                 style={{
-                                  color: `${h.textColor ?? 'black'}`,
+                                  color: textColor,
                                 }}
                               />
-                              {h.tooltip && h.tooltip.length > 0 && (
-                                <div className={style.tooltiptext}>
-                                  <div key={index}>{h.tooltip}</div>
-                                </div>
-                              )}
-                            </div>
-                          )}
-                          {!h.filter_disabled ? (
-                            <FilterIcon_SVG
-                              className={style.filterIcon}
-                              style={{
-                                color: `${h.textColor ?? 'black'}`,
-                              }}
-                            />
-                          ) : (
-                            <div className={style.filterIcon} />
-                          )}
-                        </div>
+                            ) : (
+                              <div className={style.filterIcon} />
+                            )}
+                          </div>
+                        )}
                       </div>
                     </th>
                   )

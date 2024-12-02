@@ -1,10 +1,8 @@
 .formWrapper {
   width: 50vw;
   background: white;
-}
-
-.formContainer span {
-  color: red;
+  height: 100vh;
+  overflow-y: auto; /* Only this container should scroll */
 }
 
 .formContainer {
@@ -12,9 +10,11 @@
   flex-direction: column;
   max-width: 457px;
   margin-inline: auto;
-  height: 100%;
-  overflow-y: auto; /* Only this container should scroll */
   padding-block: 20px;
+}
+
+.formError {
+  color: red;
 }
 
 /* Hide scrollbar for WebKit browsers */
@@ -130,13 +130,11 @@
   }
 
   .formWrapper {
-    height: auto;
-    overflow-y: visible; /* Enable full page scrolling on smaller screens */
+    height: fit-content;
+    overflow-y: initial;
   }
 
   .formContainer {
-    height: auto;
-    overflow-y: visible; /* Allow the form to expand naturally */
     padding-inline: 27.5px;
     padding-block: 28px;
   }

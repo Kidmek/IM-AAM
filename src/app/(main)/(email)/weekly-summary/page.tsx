@@ -20,7 +20,7 @@ export default function WeeklySummary() {
       <div className={style.weeklySummaryTable}>
         <p className='fw-700'>{title}</p>
         <div>
-          <table className={`${rows.length > 4 ? 'large' : 'small'}`}>
+          <table>
             <thead>
               <tr>
                 {rows.map((row, index) => {
@@ -31,23 +31,10 @@ export default function WeeklySummary() {
             <tbody>
               {/*  eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               {data.map((value: any, rowIndex: number) => {
-                const isLastRow = rowIndex === data.length - 1
                 return (
                   <tr key={rowIndex}>
                     {rows.map((row, columnIndex) => {
-                      let className = ''
-                      if (isLastRow) {
-                        if (columnIndex === 0) {
-                          className = 'lastRowFirstCol'
-                        } else if (columnIndex === rows.length - 1) {
-                          className = 'lastRowLastCol'
-                        }
-                      }
-                      return (
-                        <td key={columnIndex} className={className}>
-                          {value[row.accessValue]}
-                        </td>
-                      )
+                      return <td key={columnIndex}>{value[row.accessValue]}</td>
                     })}
                   </tr>
                 )
@@ -78,6 +65,7 @@ export default function WeeklySummary() {
         StockPurchaseColumns,
         Weekly.stock
       )}
+
       <p className={style.paddedInline}>
         Thank you again for the continued partnership. We look forward to
         supporting your success in the upcoming weeks. <br /> <br />

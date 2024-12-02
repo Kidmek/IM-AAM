@@ -20,6 +20,9 @@ const terms7 = '/assets/terms/terms7.png'
 const terms8 = '/assets/terms/terms8.png'
 const terms9 = '/assets/terms/terms9.png'
 const terms10 = '/assets/terms/terms10.png'
+const terms11 = "/assets/terms/terms11.png";
+const terms12 = "/assets/terms/terms12.png";
+
 
 // About
 const celebrate = '/assets/about/celebrate.png'
@@ -91,6 +94,8 @@ export {
   terms8,
   terms9,
   terms10,
+  terms11,
+  terms12,
   //
   finance,
   bull,
@@ -131,4 +136,4 @@ export {
   GuestPopup4,
   //
   Chart,
-}
+};

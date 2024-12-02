@@ -37,7 +37,9 @@
   --nav-width: 280px;
   --border-radius: 8px;
 
-  background-color: var(--bg-green);
+  --test: rgb(0, 138, 61);
+
+  background-color: rgb(0, 138, 61,0.1);
 
   --tip-text-gray: rgb(44, 44, 44);
 

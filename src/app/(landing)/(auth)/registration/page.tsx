@@ -177,7 +177,7 @@ export default function Registration() {
               </div>
             </div>
           </div>
-          {formError && <span>{formError}</span>}
+          {formError && <span className={style.formError}>{formError}</span>}
           <CustomButton
             label='Register'
             onClick={onRegister}

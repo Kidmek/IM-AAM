@@ -28,7 +28,7 @@ export default function Landing() {
                 <button>Register</button>
               </Link>
             </div>
-            <Link href={'/portfolio'}>
+            <Link href={'/portfolio/position-trader'}>
               <p>Continue As Guest</p>
             </Link>
           </div>

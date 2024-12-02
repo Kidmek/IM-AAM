@@ -74,7 +74,7 @@ export default function Login() {
         <div className={style.form}>
           <div>
             <CustomInput
-              label='username'
+              label='Username'
               state={user.username}
               setState={handleChange}
               name='username'
@@ -104,7 +104,7 @@ export default function Login() {
             </div>
           </div>
 
-          {formError && <span>{formError}</span>}
+          {formError && <span className={style.formError}>{formError}</span>}
 
           <CustomButton label='Login' onClick={onLogin} loading={loading} />
 
